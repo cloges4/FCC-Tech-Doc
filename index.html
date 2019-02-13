@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- TODO Choose color see about implenting for other browsers -->
     <meta name="theme-color" content="#000">
-    <!-- TODO: need a title -->
-    <title></title>
+    <title>CSS Features</title>
 </head>
 <!-- TODO code blocks need coloring -->
 <!-- FIXME code block spacing -->
+<!-- FIXME Change browser support to tables -->
 <!-- TODO review sections add needed markup -->
 
 <body>
@@ -21,33 +21,27 @@
                 <h2>Custom Properties</h2>
             </header>
             <p>CSS variables are entities defined by CSS authors that contain specific values to be reused throughout a
-                document. They
-                are set using custom property notation (e.g., --main-color: black;) and are accessed using the var()
-                function (e.g.,
-                color: var(--main-color);).</p>
+                document. They are set using custom property notation (e.g., --main-color: black;) and are accessed
+                using the var() function (e.g., color: var(--main-color);).</p>
             <p>Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the
-                same color might
-                be used in hundreds of different places, requiring global search and replace if that color needs to
-                change. CSS
-                variables allow a value to be stored in one place, then referenced in multiple other places. An
-                additional benefit is
-                semantic identifiers. For example, --main-text-color is easier to understand than #00ff00, especially if
-                this same color
-                is also used in other contexts.</p>
+                same color might be used in hundreds of different places, requiring global search and replace if that
+                color needs to change. CSS variables allow a value to be stored in one place, then referenced in
+                multiple other places. An additional benefit is semantic identifiers. For example, --main-text-color is
+                easier to understand than #00ff00, especially if this same color is also used in other contexts.</p>
             <p>CSS variables are subject to the cascade and inherit their value from their parent.</p>
 
             <h3>Basic usage</h3>
             <h4>Declaring a variable:</h4>
             <code class="code-block">
                 element { <br>
-                    --main-bg-color: brown; <br>
+                --main-bg-color: brown; <br>
                 } <br>
             </code>
 
             <h4>Using the variable:</h4>
             <code class="code-block">
                 element { <br>
-                    background-color: var(--main-bg-color); <br>
+                background-color: var(--main-bg-color); <br>
                 } <br>
             </code>
 
@@ -56,88 +50,85 @@
 
             <code class="code-block">
                 .one { <br>
-                    color: white; <br>
-                    background-color: brown; <br>
-                    margin: 10px; <br>
-                    width: 50px; <br>
-                    height: 50px; <br>
-                    display: inline-block; <br>
+                color: white; <br>
+                background-color: brown; <br>
+                margin: 10px; <br>
+                width: 50px; <br>
+                height: 50px; <br>
+                display: inline-block; <br>
                 } <br>
-                
+
                 .two { <br>
-                    color: white; <br>
-                    background-color: black; <br>
-                    margin: 10px; <br>
-                    width: 150px; <br>
-                    height: 70px; <br>
-                    display: inline-block; <br>
+                color: white; <br>
+                background-color: black; <br>
+                margin: 10px; <br>
+                width: 150px; <br>
+                height: 70px; <br>
+                display: inline-block; <br>
                 } <br>
                 .three { <br>
-                    color: white; <br>
-                    background-color: brown; <br>
-                    margin: 10px; <br>
-                    width: 75px; <br>
+                color: white; <br>
+                background-color: brown; <br>
+                margin: 10px; <br>
+                width: 75px; <br>
                 } <br>
                 .four { <br>
-                    color: white; <br>
-                    background-color: brown; <br>
-                    margin: 10px; <br>
-                   width: 100px; <br>
+                color: white; <br>
+                background-color: brown; <br>
+                margin: 10px; <br>
+                width: 100px; <br>
                 } <br>
-                
+
                 .five { <br>
-                 background-color: brown; <br>
+                background-color: brown; <br>
                 } <br>
             </code>
 
             <p>Notice the repetition in the CSS. The background color is set to brown in several places. For some CSS
-                declarations, it
-                is possible to declare this higher in the cascade and let CSS inheritance solve this problem naturally.
-                For non-trivial
-                projects, this is not always possible. By declaring a variable on the :root pseudo-class, a CSS author
-                can reduce the
-                need for repetition by using the variable.</p>
+                declarations, it is possible to declare this higher in the cascade and let CSS inheritance solve this
+                problem naturally. For non-trivial projects, this is not always possible. By declaring a variable on the
+                :root pseudo-class, a CSS author can reduce the need for repetition by using the variable.</p>
 
             <h4>Example 2</h4>
             <code class="code-block">
-                    :root { <br>
-                        --main-bg-color: brown; <br>
-                    } <br>
-                    
-                    .one { <br>
-                        color: white; <br>
-                        background-color: var(--main-bg-color); <br>
-                        margin: 10px; <br>
-                        width: 50px; <br>
-                        height: 50px; <br>
-                        display: inline-block; <br>
-                    } <br>
-                    
-                    .two { <br>
-                        color: white; <br>
-                        background-color: black; <br>
-                        margin: 10px; <br>
-                        width: 150px; <br>
-                        height: 70px; <br>
-                        display: inline-block; <br>
-                    } <br>
-                    .three { <br>
-                        color: white; <br>
-                        background-color: var(--main-bg-color); <br>
-                        margin: 10px; <br>
-                        width: 75px; <br>
-                    } <br>
-                    .four { <br>
-                        color: white; <br>
-                        background-color: var(--main-bg-color); <br>
-                        margin: 10px; <br>
-                        width: 100px; <br>
-                    } <br>
-                    
-                    .five { <br>
-                        background-color: var(--main-bg-color); <br>
-                    } <br>
-                </code>
+                :root { <br>
+                --main-bg-color: brown; <br>
+                } <br>
+
+                .one { <br>
+                color: white; <br>
+                background-color: var(--main-bg-color); <br>
+                margin: 10px; <br>
+                width: 50px; <br>
+                height: 50px; <br>
+                display: inline-block; <br>
+                } <br>
+
+                .two { <br>
+                color: white; <br>
+                background-color: black; <br>
+                margin: 10px; <br>
+                width: 150px; <br>
+                height: 70px; <br>
+                display: inline-block; <br>
+                } <br>
+                .three { <br>
+                color: white; <br>
+                background-color: var(--main-bg-color); <br>
+                margin: 10px; <br>
+                width: 75px; <br>
+                } <br>
+                .four { <br>
+                color: white; <br>
+                background-color: var(--main-bg-color); <br>
+                margin: 10px; <br>
+                width: 100px; <br>
+                } <br>
+
+                .five { <br>
+                background-color: var(--main-bg-color); <br>
+                } <br>
+            </code>
 
             <aside class="browser-support">
                 <ul>
@@ -157,28 +148,26 @@
                 <h2>Feature Query</h2>
             </header>
             <p>The <code class="code-snippet">@supports</code> CSS at rule lets you specify declarations that depend on
-                a browser's support for one or more specific CSS features. This is called a
-                feature query. The rule may be placed at the top level of your code or nested inside any other
-                conditional group
-                at-rule.</p>
+                a browser's support for one or more specific CSS features. This is called a feature query. The rule may
+                be placed at the top level of your code or nested inside any other conditional group at-rule.</p>
             <p>The <code class="code-snippet">@supports</code> at-rule associates a block of statements with a supports
-                condition. The supports condition consists of one
-                or more name-value pairs combined by conjunctions <span class="code-snippet">(and)</span>, disjunctions
-                <span class="code-snippet">(or)</span>, and/or negations <span class="code-snippet">(not)</span>.
-                Precedence of
-                operators can be defined with parentheses.</p>
+                condition. The supports condition consists of one or more name-value pairs combined by conjunctions
+                <span class="code-snippet">(and)</span>, disjunctions <span class="code-snippet">(or)</span>, and/or
+                negations <span class="code-snippet">(not)</span>. Precedence of operators can be defined with
+                parentheses.</p>
             <p>In JavaScript, <code class="code-snippet">@supports</code> can be accessed via the CSS object model
                 interface CSSSupportsRule.</p>
             <p>The most basic supports condition is a simple declaration (a property name followed by a value, separated
-                by a colon).
-                The declaration must be surrounded by parentheses</p>
+                by a colon). The declaration must be surrounded by parentheses</p>
+
             <h3>Syntax</h3>
             <h4>Example 1</h4>
+
             <code class="code-block">
                 @supports (display: grid) { <br>
-                    div { <br>
-                        display: grid; <br>
-                    } <br>
+                div { <br>
+                display: grid; <br>
+                } <br>
                 } <br>
             </code>
             <p>The above example checks to see if the browser support CSS-grid if yes, then the styles will be applied,
@@ -186,14 +175,13 @@
             <h4>Example 2</h4>
             <code class="code-block">
                 @supports not (display: grid) { <br>
-                    div { <br>
-                        float: right; <br>
-                    } <br>
+                div { <br>
+                float: right; <br>
+                } <br>
                 } <br>
             </code>
             <p>The above example checks to see if the browser does not support CSS-grid if it does not, then the styles
-                will be applied, if it does support CSS-grid then the
-                block will be ignored.</p>
+                will be applied, if it does support CSS-grid then the block will be ignored.</p>
 
             <aside class="browser-support">
                 <ul>
@@ -215,9 +203,9 @@
             <p>The calc() CSS function lets you perform calculations when specifying CSS property values. It can be used
                 anywhere a length, frequency, angle, time, percentage, number, or integer is allowed.</p>
             <p>The calc() function takes a single expression as its parameter, with the expression's result used as the
-                value. The
-                expression can be any simple expression combining the following operators, using standard operator
-                precedence rules:</p>
+                value. The expression can be any simple expression combining the following operators, using standard
+                operator precedence rules:</p>
+
             <ul>
                 <li>Addition: +</li>
                 <li>Subtraction: -</li>
@@ -229,38 +217,41 @@
                 needed.</p>
 
             <h4>Example 1</h4>
+
             <p>calc() makes it easy to position an object with a set margin. In this example, the CSS creates a banner
-                that stretches
-                across the window, with a 40-pixel gap between both sides of the banner and the edges of the window:</p>
+                that stretches across the window, with a 40-pixel gap between both sides of the banner and the edges of
+                the window:</p>
+
             <code class="code-block">
                 .banner { <br>
-                    position: absolute; <br>
-                    left: 40px; <br>
-                    width: calc(100% - 80px); <br>
-                    border: solid black 1px; <br>
-                    box-shadow: 1px 2px; <br>
-                    background-color: yellow; <br>
-                    padding: 6px; <br>
-                    text-align: center; <br>
-                    box-sizing: border-box; <br>
+                position: absolute; <br>
+                left: 40px; <br>
+                width: calc(100% - 80px); <br>
+                border: solid black 1px; <br>
+                box-shadow: 1px 2px; <br>
+                background-color: yellow; <br>
+                padding: 6px; <br>
+                text-align: center; <br>
+                box-sizing: border-box; <br>
                 } <br>
             </code>
 
             <h4>Example 2</h4>
+
             <p>Another use case for calc() is to help ensure that form fields fit in the available space, without
-                extruding past the
-                edge of their container, while maintaining an appropriate margin.</p>
+                extruding past the edge of their container, while maintaining an appropriate margin.</p>
+
             <code class="code-block">
                 input { <br>
-                    padding: 2px; <br>
-                    display: block; <br>
-                    width: calc(100% - 1em); <br>
+                padding: 2px; <br>
+                display: block; <br>
+                width: calc(100% - 1em); <br>
                 } <br>
-                
+
                 #formbox { <br>
-                    width: calc(100% / 6); <br>
-                    border: 1px solid black; <br>
-                    padding: 4px; <br>
+                width: calc(100% / 6); <br>
+                border: 1px solid black; <br>
+                padding: 4px; <br>
                 } <br>
             </code>
 
@@ -287,41 +278,41 @@
             <h4>Example 1</h4>
             <code class="code-block">
                 /* At the top level of your code */ <br>
-                    @media screen and (min-width: 900px) { <br>
-                        article { <br>
-                            padding: 1rem 3rem; <br>
-                        } <br>
-                    } <br>
-                
+                @media screen and (min-width: 900px) { <br>
+                article { <br>
+                padding: 1rem 3rem; <br>
+                } <br>
+                } <br>
+
                 /* Nested within another conditional at-rule */ <br>
-                    @supports (display: flex) { <br>
-                        @media screen and (min-width: 900px) { <br>
-                            article { <br>
-                                display: flex; <br>
-                            } <br>
-                        } <br>
-                    } <br>
+                @supports (display: flex) { <br>
+                @media screen and (min-width: 900px) { <br>
+                article { <br>
+                display: flex; <br>
+                } <br>
+                } <br>
+                } <br>
             </code>
 
             <h4>Example 2</h4>
             <code class="code-block">
                 @media print { <br>
-                    body { font-size: 10pt; } <br>
+                body { font-size: 10pt; } <br>
                 } <br>
-                
+
                 @media screen { <br>
-                    body { font-size: 13px; } <br>
+                body { font-size: 13px; } <br>
                 } <br>
-                
+
                 @media screen, print { <br>
-                    body { line-height: 1.2; } <br>
+                body { line-height: 1.2; } <br>
                 } <br>
-                
+
                 @media only screen <br>
-                    and (min-width: 320px) <br>
-                    and (max-width: 480px) <br>
-                    and (resolution: 150dpi) { <br>
-                        body { line-height: 1.4; } <br>
+                and (min-width: 320px) <br>
+                and (max-width: 480px) <br>
+                and (resolution: 150dpi) { <br>
+                body { line-height: 1.4; } <br>
                 } <br>
             </code>
 
@@ -345,45 +336,38 @@
             <p>The box-sizing CSS property defines how the user agent should calculate the total width and height of an
                 element.</p>
             <p>By default in the CSS box model, the width and height you assign to an element is applied only to the
-                element's content
-                box. If the element has any border or padding, this is then added to the width and height to arrive at
-                the size of the
-                box that's rendered on the screen. This means that when you set width and height, you have to adjust the
-                value you give
-                to allow for any border or padding that may be added.
-                The box-sizing property can be used to adjust this behavior:</p>
+                element's content box. If the element has any border or padding, this is then added to the width and
+                height to arrive at the size of the box that's rendered on the screen. This means that when you set
+                width and height, you have to adjust the value you give to allow for any border or padding that may be
+                added. The box-sizing property can be used to adjust this behavior:</p>
             <ul>
                 <li>content-box gives you the default CSS box-sizing behavior. If you set an element's width to 100
-                    pixels, then the
-                    element's content box will be 100 pixels wide, and the width of any border or padding will be added
-                    to the final
-                    rendered width.</li>
+                    pixels, then the element's content box will be 100 pixels wide, and the width of any border or
+                    padding will be added to the final rendered width.</li>
                 <li>border-box tells the browser to account for any border and padding in the values you specify for an
-                    element's width and
-                    height. If you set an element's width to 100 pixels, that 100 pixels will include any border or
-                    padding you added, and
-                    the content box will shrink to absorb that extra width. This typically makes it much easier to size
-                    elements.</li>
+                    element's width and height. If you set an element's width to 100 pixels, that 100 pixels will
+                    include any border or padding you added, and the content box will shrink to absorb that extra width.
+                    This typically makes it much easier to size elements.</li>
             </ul>
 
             <h4>Example 1</h4>
             <code class="code-block">
                 .content-box { <br>
-                    box-sizing: content-box; <br>
-                    /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px <br>
-                        Total height: 80px + (2 * 20px) + (2 * 8px) = 136px <br>
-                        Content box width: 160px <br>
-                        Content box height: 80px */ <br>
+                box-sizing: content-box; <br>
+                /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px <br>
+                Total height: 80px + (2 * 20px) + (2 * 8px) = 136px <br>
+                Content box width: 160px <br>
+                Content box height: 80px */ <br>
                 } <br>
             </code>
             <h4>Example 2</h4>
             <code class="code-block">
                 .border-box { <br>
-                    box-sizing: border-box; <br>
-                    /* Total width: 160px <br>
-                    Total height: 80px <br>
-                    Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px <br>
-                    Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */ <br>
+                box-sizing: border-box; <br>
+                /* Total width: 160px <br>
+                Total height: 80px <br>
+                Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px <br>
+                Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */ <br>
             </code>
             <aside class="browser-support">
                 <ul>
@@ -402,10 +386,8 @@
     </main>
     <nav id="navbar">
         <header>
-            <!-- TODO need a better title -->
-            <h1>CSS</h1>
+            <h1>CSS Features</h1>
         </header>
-        <!-- TODO create section links to topics -->
         <ul>
             <li><a class="nav-link" href="#custom_properties">Custom Properties</a></li>
             <li><a class="nav-link" href="#feature_query">Feature Query</a></li>
