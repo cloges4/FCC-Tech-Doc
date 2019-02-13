@@ -10,121 +10,120 @@
     <!-- TODO: need a title -->
     <title></title>
 </head>
-<!-- TODO Need to condence content in each section, document will be large. -->
+<!-- TODO Need to condense content in each section, document will be large. -->
 
 <body>
     <main id="main-doc">
-        <section id="Normal_Flow" class="main-section">
+        <section id="feature_query" class="main-section">
             <header>
-                <h2>Normal Flow</h2>
+                <h2>Feature Query</h2>
             </header>
-            <h3>How are elements laid out by default?</h3>
-            <p>First of all, individual element boxes are laid out by taking the elements' content, then adding any
-                padding, border and
-                margin around them — it's that box model thing again, which we've looked at earlier.</p>
-            <p>By default, a block level element's content is 100% of the width of its parent element, and as tall
-                as its content.
-                Inline elements are all tall as their content, and as wide as their content. You can't set width or
-                height on inline
-                elements — they just sit inside the content of block level elements. If you want to control the size
-                of an inline
-                element in this manner, you need to set it to behave like a block level element with <span
-                    class="code-snippet">display: block;</span> (or even,<span
-                    class="code-snippet">display:inline-block;</span>
-                which mixes characteristics from both.)</p>
-            <p>That explains individual elements, but what about how elements interact with one another? The normal
-                layout flow
-                (mentioned in the layout introduction article) is the system by which elements are placed inside the
-                browser's viewport.
-                By default, block-level elements are laid out in the direction that blocks display in the writing
-                mode of the document —
-                each one will appear on a new line below the last one, and they will be separated by any margin that
-                is set on them. In
-                English therefore, or any other horizontal, top to bottom writing mode, block-level elements are
-                laid out vertically.</p>
-            <p>Inline elements behave differently — they don't appear on new lines; instead, they sit on the same
-                line as one another
-                and any adjacent (or wrapped) text content, as long as there is space for them to do so inside the
-                width of the parent
-                block level element. If there isn't space, then the overflowing text or elements will move down to a
-                new line.</p>
-            <p>If two adjacent elements both have the margin set on them and the two margins touch, the larger of
-                the two remains, and
-                the smaller one disappears — this is called margin collapsing, and we have met this before too.</p>
-            <p>Let's look at a simple example that explains all of this:</p>
-            <!-- TODO Code section only add HTML without the image -->
-            <!-- TODO Code output: create a browser styled only section for this content to be displayed -->
+        </section>
+        <section id="custom_properties" class="main-section">
+            <header>
+                <h2>Custom Properties</h2>
             </header>
+            <!-- TODO Section content -->
+            <p>The <code class="code-snippet">@supports</code> CSS at rule lets you specify declarations that depend on
+                a browser's support for one or more specific CSS features. This is called a
+                feature query. The rule may be placed at the top level of your code or nested inside any other
+                conditional group
+                at-rule.</p>
+            <p>The <code class="code-snippet">@supports</code> at-rule associates a block of statements with a supports
+                condition. The supports condition consists of one
+                or more name-value pairs combined by conjunctions <span class="code-snippet">(and)</span>, disjunctions
+                <span class="code-snippet">(or)</span>, and/or negations <span class="code-snippet">(not)</span>.
+                Precedence of
+                operators can be defined with parentheses.</p>
+            <p>In JavaScript, <code class="code-snippet">@supports</code> can be accessed via the CSS object model
+                interface CSSSupportsRule.</p>
+            <p>The most basic supports condition is a simple declaration (a property name followed by a value, separated
+                by a colon).
+                The declaration must be surrounded by parentheses</p>
+            <h3>Syntax</h3>
+            <h4>Example 1</h4>
+            <code class="code-block">
+                @supports (display: grid) { <br>
+                    div { <br>
+                        display: grid; <br>
+                    } <br>
+                } <br>
+            </code>
+            <p>The above example checks to see if the browser support CSS-grid if yes, then the styles will be applied,
+                if no then the block will be ignored.</p>
+            <h4>Example 2</h4>
+            <code class="code-block">
+                @supports not (display: grid) { <br>
+                    div { <br>
+                        float: right; <br>
+                    } <br>
+                } <br>
+            </code>
+            <p>The above example checks to see if the browser does not support CSS-grid if it does not, then the styles
+                will be applied, if it does support CSS-grid then the
+                block will be ignored.</p>
+            <!-- TODO browser support -->
+
+            <aside class="browser-support">
+                <ul>
+                    <li>IE: not supported</li>
+                    <li>Edge: 12</li>
+                    <li>Firefox: 22</li>
+                    <li>Chrome: 28</li>
+                    <li>Safari: 9</li>
+                </ul>
+            </aside>
+
+            <!-- TODO attribution links -->
+            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">Mdn</a>
+            <a class="credit" href="https://caniuse.com/#search=%40supports">CanIUse</a>
+        </section>
+
+
+        <section id="calc()" class="main-section">
+            <header>
+                <h2>calc()</h2>
+            </header>
+            <!-- TODO Section content -->
+            <!-- TODO Code example -->
+            <!-- TODO output example as needed -->
+            <!-- TODO browser support -->
+            <!-- TODO attribution links -->
         </section>
         <section id="Flexbox" class="main-section">
             <header>
                 <h2>Flexbox</h2>
-            </header>
-            <h3>Why Flexbox?</h3>
-            <p>For a long time, the only reliable cross browser-compatible tools available for creating CSS layouts were
-                things like
-                <!-- TODO Links to section -->
-                <a href="">floats</a> and <a href="">positioning</a>. These are fine and they work, but in some ways
-                they are also rather limiting and
-                frustrating.</p>
-            <p>The following simple layout requirements are either difficult or impossible to achieve with such tools,
-                in any kind of
-                convenient, flexible way:</p>
-            <ul>
-                <li>Vertically centering a block of content inside its parent.</li>
-                <li>Making all the children of a container take up an equal amount of the available width/height,
-                    regardless of how much
-                    width/height is available.</li>
-                <li>Making all columns in a multiple column layout adopt the same height even if they contain a
-                    different amount of content.</li>
-            </ul>
-        </section>
-        <section id="Grids" class="main-section">
-            <header>
-                <h2>Grids</h2>
+                <!-- TODO Section content -->
+                <!-- TODO Code example -->
+                <!-- TODO output example as needed -->
+                <!-- TODO browser support -->
+                <!-- TODO attribution links -->
             </header>
         </section>
-        <section id="Floats" class="main-section">
+        <section id="CSS-Grid" class="main-section">
             <header>
-                <h2>Floats</h2>
-            </header>
-        </section>
-        <section id="Positioning" class="main-section">
-            <header>
-                <h2>Positioning</h2>
-            </header>
-        </section>
-        <section id="Multiple_column_layout" class="main-section">
-            <header>
-                <h2>Multiple column layout</h2>
-            </header>
-        </section>
-        <section id="Legacy_layout_methods" class="main-section">
-            <header>
-                <h2>Legacy layout methods</h2>
-            </header>
-        </section>
-        <section id="Supporting_older_browsers" class="main-section">
-            <header>
-                <h2>Supporting older browsers</h2>
+                <h2>CSS-Grid</h2>
+                <!-- TODO Section content -->
+                <!-- TODO Code example -->
+                <!-- TODO output example as needed -->
+                <!-- TODO browser support -->
+                <!-- TODO attribution links -->
             </header>
         </section>
 
     </main>
     <nav id="navbar">
         <header>
-            <h1>Introduction to CSS layout</h1>
+            <!-- TODO need a better title -->
+            <h1>CSS</h1>
         </header>
         <!-- TODO create section links to topics -->
         <ul>
-            <li><a class="nav-link" href="">Normal Flow</a></li>
+            <li><a class="nav-link" href="">Feature Query</a></li>
+            <li><a class="nav-link" href="">Custom Properties</a></li>
+            <li><a class="nav-link" href="">calc()</a></li>
             <li><a class="nav-link" href="">Flexbox</a></li>
-            <li><a class="nav-link" href="">Grids</a></li>
-            <li><a class="nav-link" href="">Floats</a></li>
-            <li><a class="nav-link" href="">Positioning</a></li>
-            <li><a class="nav-link" href="">Multiple column layout</a></li>
-            <li><a class="nav-link" href="">Legacy layout methods</a></li>
-            <li><a class="nav-link" href="">Supporting older browsers</a></li>
+            <li><a class="nav-link" href="">CSS-Grid</a></li>
         </ul>
     </nav>
 
