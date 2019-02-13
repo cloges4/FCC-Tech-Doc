@@ -280,9 +280,51 @@
             <header>
                 <h2>Media Queries</h2>
             </header>
-            <!-- TODO Section content -->
-            <!-- TODO Code example -->
-            <!-- TODO output example as needed -->
+            <p>The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more
+                media queries.</p>
+            <p>The @media at-rule may be placed at the top level of your code or nested inside any other conditional
+                group at-rule.</p>
+            <h4>Example 1</h4>
+            <code class="code-block">
+                /* At the top level of your code */ <br>
+                    @media screen and (min-width: 900px) { <br>
+                        article { <br>
+                            padding: 1rem 3rem; <br>
+                        } <br>
+                    } <br>
+                
+                /* Nested within another conditional at-rule */ <br>
+                    @supports (display: flex) { <br>
+                        @media screen and (min-width: 900px) { <br>
+                            article { <br>
+                                display: flex; <br>
+                            } <br>
+                        } <br>
+                    } <br>
+            </code>
+
+            <h4>Example 2</h4>
+            <code class="code-block">
+                @media print { <br>
+                    body { font-size: 10pt; } <br>
+                } <br>
+                
+                @media screen { <br>
+                    body { font-size: 13px; } <br>
+                } <br>
+                
+                @media screen, print { <br>
+                    body { line-height: 1.2; } <br>
+                } <br>
+                
+                @media only screen <br>
+                    and (min-width: 320px) <br>
+                    and (max-width: 480px) <br>
+                    and (resolution: 150dpi) { <br>
+                        body { line-height: 1.4; } <br>
+                } <br>
+            </code>
+
             <aside class="browser-support">
                 <ul>
                     <li>IE: 9</li>
