@@ -12,6 +12,7 @@
 </head>
 <!-- TODO code blocks need coloring -->
 <!-- FIXME code block spacing -->
+<!-- TODO review sections add needed markup -->
 
 <body>
     <main id="main-doc">
@@ -211,31 +212,109 @@
             <header>
                 <h2>calc()</h2>
             </header>
+            <p>The calc() CSS function lets you perform calculations when specifying CSS property values. It can be used
+                anywhere a length, frequency, angle, time, percentage, number, or integer is allowed.</p>
+            <p>The calc() function takes a single expression as its parameter, with the expression's result used as the
+                value. The
+                expression can be any simple expression combining the following operators, using standard operator
+                precedence rules:</p>
+            <ul>
+                <li>Addition: +</li>
+                <li>Subtraction: -</li>
+                <li>Multiplication (at least one of the arguments must be a number): *</li>
+                <li>Division (the right-hand side must be a number): /</li>
+            </ul>
+            <p>The operands in the expression may be any length syntax value. You can use different units for each value
+                in your expression, if you wish. You may also use parentheses to establish computation order when
+                needed.</p>
+
+            <h4>Example 1</h4>
+            <p>calc() makes it easy to position an object with a set margin. In this example, the CSS creates a banner
+                that stretches
+                across the window, with a 40-pixel gap between both sides of the banner and the edges of the window:</p>
+            <code class="code-block">
+                .banner { <br>
+                    position: absolute; <br>
+                    left: 40px; <br>
+                    width: calc(100% - 80px); <br>
+                    border: solid black 1px; <br>
+                    box-shadow: 1px 2px; <br>
+                    background-color: yellow; <br>
+                    padding: 6px; <br>
+                    text-align: center; <br>
+                    box-sizing: border-box; <br>
+                } <br>
+            </code>
+
+            <h4>Example 2</h4>
+            <p>Another use case for calc() is to help ensure that form fields fit in the available space, without
+                extruding past the
+                edge of their container, while maintaining an appropriate margin.</p>
+            <code class="code-block">
+                input { <br>
+                    padding: 2px; <br>
+                    display: block; <br>
+                    width: calc(100% - 1em); <br>
+                } <br>
+                
+                #formbox { <br>
+                    width: calc(100% / 6); <br>
+                    border: 1px solid black; <br>
+                    padding: 4px; <br>
+                } <br>
+            </code>
+
+            <aside class="browser-support">
+                <ul>
+                    <li>IE: 9 (partial support)</li>
+                    <li>Edge: 12</li>
+                    <li>Firefox: 4</li>
+                    <li>Chrome: 19</li>
+                    <li>Safari: 6</li>
+                </ul>
+            </aside>
+            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">Mdn</a>
+            <a class="credit" href="https://caniuse.com/#search=calc">CanIUse</a>
         </section>
-        <!-- TODO Section content -->
-        <!-- TODO Code example -->
-        <!-- TODO output example as needed -->
-        <!-- TODO browser support -->
-        <!-- TODO attribution links -->
-        <section id="Flexbox" class="main-section">
+        <section id="media_queries" class="main-section">
             <header>
-                <h2>Flexbox</h2>
+                <h2>Media Queries</h2>
             </header>
             <!-- TODO Section content -->
             <!-- TODO Code example -->
             <!-- TODO output example as needed -->
-            <!-- TODO browser support -->
-            <!-- TODO attribution links -->
+            <aside class="browser-support">
+                <ul>
+                    <li>IE: 9</li>
+                    <li>Edge: 12</li>
+                    <li>Firefox: 3.5</li>
+                    <li>Chrome: 4</li>
+                    <li>Safari: 4</li>
+                </ul>
+            </aside>
+
+            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">Mdn</a>
+            <a class="credit" href="https://caniuse.com/#search=%40media">CanIUse</a>
         </section>
-        <section id="CSS-Grid" class="main-section">
+        <section id="Box-sizing" class="main-section">
             <header>
-                <h2>CSS-Grid</h2>
+                <h2>Box-sizing</h2>
             </header>
             <!-- TODO Section content -->
             <!-- TODO Code example -->
             <!-- TODO output example as needed -->
-            <!-- TODO browser support -->
-            <!-- TODO attribution links -->
+            <aside class="browser-support">
+                <ul>
+                    <li>IE: 8</li>
+                    <li>Edge: 12</li>
+                    <li>Firefox: 2</li>
+                    <li>Chrome: 4</li>
+                    <li>Safari: 3.1</li>
+                </ul>
+            </aside>
+
+            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">Mdn</a>
+            <a class="credit" href="https://caniuse.com/#search=box-si">CanIUse</a>
         </section>
 
     </main>
@@ -249,8 +328,8 @@
             <li><a class="nav-link" href="">Custom Properties</a></li>
             <li><a class="nav-link" href="">Feature Query</a></li>
             <li><a class="nav-link" href="">calc()</a></li>
-            <li><a class="nav-link" href="">Flexbox</a></li>
-            <li><a class="nav-link" href="">CSS-Grid</a></li>
+            <li><a class="nav-link" href="">Media Queries</a></li>
+            <li><a class="nav-link" href="">Box-sizing</a></li>
         </ul>
     </nav>
 
