@@ -10,20 +10,151 @@
     <!-- TODO: need a title -->
     <title></title>
 </head>
-<!-- TODO Need to condense content in each section, document will be large. -->
+<!-- TODO code blocks need coloring -->
+<!-- FIXME code block spacing -->
 
 <body>
     <main id="main-doc">
-        <section id="feature_query" class="main-section">
-            <header>
-                <h2>Feature Query</h2>
-            </header>
-        </section>
         <section id="custom_properties" class="main-section">
             <header>
                 <h2>Custom Properties</h2>
             </header>
-            <!-- TODO Section content -->
+            <p>CSS variables are entities defined by CSS authors that contain specific values to be reused throughout a
+                document. They
+                are set using custom property notation (e.g., --main-color: black;) and are accessed using the var()
+                function (e.g.,
+                color: var(--main-color);).</p>
+            <p>Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the
+                same color might
+                be used in hundreds of different places, requiring global search and replace if that color needs to
+                change. CSS
+                variables allow a value to be stored in one place, then referenced in multiple other places. An
+                additional benefit is
+                semantic identifiers. For example, --main-text-color is easier to understand than #00ff00, especially if
+                this same color
+                is also used in other contexts.</p>
+            <p>CSS variables are subject to the cascade and inherit their value from their parent.</p>
+
+            <h3>Basic usage</h3>
+            <h4>Declaring a variable:</h4>
+            <code class="code-block">
+                element { <br>
+                    --main-bg-color: brown; <br>
+                } <br>
+            </code>
+
+            <h4>Using the variable:</h4>
+            <code class="code-block">
+                element { <br>
+                    background-color: var(--main-bg-color); <br>
+                } <br>
+            </code>
+
+            <h4>Example 1</h4>
+            <p>Let's start with this simple CSS that applies the same color to elements of different classes:</p>
+
+            <code class="code-block">
+                .one { <br>
+                    color: white; <br>
+                    background-color: brown; <br>
+                    margin: 10px; <br>
+                    width: 50px; <br>
+                    height: 50px; <br>
+                    display: inline-block; <br>
+                } <br>
+                
+                .two { <br>
+                    color: white; <br>
+                    background-color: black; <br>
+                    margin: 10px; <br>
+                    width: 150px; <br>
+                    height: 70px; <br>
+                    display: inline-block; <br>
+                } <br>
+                .three { <br>
+                    color: white; <br>
+                    background-color: brown; <br>
+                    margin: 10px; <br>
+                    width: 75px; <br>
+                } <br>
+                .four { <br>
+                    color: white; <br>
+                    background-color: brown; <br>
+                    margin: 10px; <br>
+                   width: 100px; <br>
+                } <br>
+                
+                .five { <br>
+                 background-color: brown; <br>
+                } <br>
+            </code>
+
+            <p>Notice the repetition in the CSS. The background color is set to brown in several places. For some CSS
+                declarations, it
+                is possible to declare this higher in the cascade and let CSS inheritance solve this problem naturally.
+                For non-trivial
+                projects, this is not always possible. By declaring a variable on the :root pseudo-class, a CSS author
+                can reduce the
+                need for repetition by using the variable.</p>
+
+            <h4>Example 2</h4>
+            <code class="code-block">
+                    :root { <br>
+                        --main-bg-color: brown; <br>
+                    } <br>
+                    
+                    .one { <br>
+                        color: white; <br>
+                        background-color: var(--main-bg-color); <br>
+                        margin: 10px; <br>
+                        width: 50px; <br>
+                        height: 50px; <br>
+                        display: inline-block; <br>
+                    } <br>
+                    
+                    .two { <br>
+                        color: white; <br>
+                        background-color: black; <br>
+                        margin: 10px; <br>
+                        width: 150px; <br>
+                        height: 70px; <br>
+                        display: inline-block; <br>
+                    } <br>
+                    .three { <br>
+                        color: white; <br>
+                        background-color: var(--main-bg-color); <br>
+                        margin: 10px; <br>
+                        width: 75px; <br>
+                    } <br>
+                    .four { <br>
+                        color: white; <br>
+                        background-color: var(--main-bg-color); <br>
+                        margin: 10px; <br>
+                        width: 100px; <br>
+                    } <br>
+                    
+                    .five { <br>
+                        background-color: var(--main-bg-color); <br>
+                    } <br>
+                </code>
+
+            <aside class="browser-support">
+                <ul>
+                    <li>IE: not supported</li>
+                    <li>Edge: 15 (partial support)</li>
+                    <li>Firefox: 31</li>
+                    <li>Chrome: 49</li>
+                    <li>Safari: 9.1</li>
+                </ul>
+            </aside>
+
+            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">Mdn</a>
+            <a class="credit" href="https://caniuse.com/#search=css%20variables">CanIUse</a>
+        </section>
+        <section id="feature_query" class="main-section">
+            <header>
+                <h2>Feature Query</h2>
+            </header>
             <p>The <code class="code-snippet">@supports</code> CSS at rule lets you specify declarations that depend on
                 a browser's support for one or more specific CSS features. This is called a
                 feature query. The rule may be placed at the top level of your code or nested inside any other
@@ -62,7 +193,6 @@
             <p>The above example checks to see if the browser does not support CSS-grid if it does not, then the styles
                 will be applied, if it does support CSS-grid then the
                 block will be ignored.</p>
-            <!-- TODO browser support -->
 
             <aside class="browser-support">
                 <ul>
@@ -74,15 +204,22 @@
                 </ul>
             </aside>
 
-            <!-- TODO attribution links -->
             <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">Mdn</a>
             <a class="credit" href="https://caniuse.com/#search=%40supports">CanIUse</a>
         </section>
-
-
         <section id="calc()" class="main-section">
             <header>
                 <h2>calc()</h2>
+            </header>
+        </section>
+        <!-- TODO Section content -->
+        <!-- TODO Code example -->
+        <!-- TODO output example as needed -->
+        <!-- TODO browser support -->
+        <!-- TODO attribution links -->
+        <section id="Flexbox" class="main-section">
+            <header>
+                <h2>Flexbox</h2>
             </header>
             <!-- TODO Section content -->
             <!-- TODO Code example -->
@@ -90,25 +227,15 @@
             <!-- TODO browser support -->
             <!-- TODO attribution links -->
         </section>
-        <section id="Flexbox" class="main-section">
-            <header>
-                <h2>Flexbox</h2>
-                <!-- TODO Section content -->
-                <!-- TODO Code example -->
-                <!-- TODO output example as needed -->
-                <!-- TODO browser support -->
-                <!-- TODO attribution links -->
-            </header>
-        </section>
         <section id="CSS-Grid" class="main-section">
             <header>
                 <h2>CSS-Grid</h2>
-                <!-- TODO Section content -->
-                <!-- TODO Code example -->
-                <!-- TODO output example as needed -->
-                <!-- TODO browser support -->
-                <!-- TODO attribution links -->
             </header>
+            <!-- TODO Section content -->
+            <!-- TODO Code example -->
+            <!-- TODO output example as needed -->
+            <!-- TODO browser support -->
+            <!-- TODO attribution links -->
         </section>
 
     </main>
@@ -119,8 +246,8 @@
         </header>
         <!-- TODO create section links to topics -->
         <ul>
-            <li><a class="nav-link" href="">Feature Query</a></li>
             <li><a class="nav-link" href="">Custom Properties</a></li>
+            <li><a class="nav-link" href="">Feature Query</a></li>
             <li><a class="nav-link" href="">calc()</a></li>
             <li><a class="nav-link" href="">Flexbox</a></li>
             <li><a class="nav-link" href="">CSS-Grid</a></li>
