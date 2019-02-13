@@ -342,9 +342,49 @@
             <header>
                 <h2>Box-sizing</h2>
             </header>
-            <!-- TODO Section content -->
-            <!-- TODO Code example -->
-            <!-- TODO output example as needed -->
+            <p>The box-sizing CSS property defines how the user agent should calculate the total width and height of an
+                element.</p>
+            <p>By default in the CSS box model, the width and height you assign to an element is applied only to the
+                element's content
+                box. If the element has any border or padding, this is then added to the width and height to arrive at
+                the size of the
+                box that's rendered on the screen. This means that when you set width and height, you have to adjust the
+                value you give
+                to allow for any border or padding that may be added.
+                The box-sizing property can be used to adjust this behavior:</p>
+            <ul>
+                <li>content-box gives you the default CSS box-sizing behavior. If you set an element's width to 100
+                    pixels, then the
+                    element's content box will be 100 pixels wide, and the width of any border or padding will be added
+                    to the final
+                    rendered width.</li>
+                <li>border-box tells the browser to account for any border and padding in the values you specify for an
+                    element's width and
+                    height. If you set an element's width to 100 pixels, that 100 pixels will include any border or
+                    padding you added, and
+                    the content box will shrink to absorb that extra width. This typically makes it much easier to size
+                    elements.</li>
+            </ul>
+
+            <h4>Example 1</h4>
+            <code class="code-block">
+                .content-box { <br>
+                    box-sizing: content-box; <br>
+                    /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px <br>
+                        Total height: 80px + (2 * 20px) + (2 * 8px) = 136px <br>
+                        Content box width: 160px <br>
+                        Content box height: 80px */ <br>
+                } <br>
+            </code>
+            <h4>Example 2</h4>
+            <code class="code-block">
+                .border-box { <br>
+                    box-sizing: border-box; <br>
+                    /* Total width: 160px <br>
+                    Total height: 80px <br>
+                    Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px <br>
+                    Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */ <br>
+            </code>
             <aside class="browser-support">
                 <ul>
                     <li>IE: 8</li>
@@ -367,15 +407,13 @@
         </header>
         <!-- TODO create section links to topics -->
         <ul>
-            <li><a class="nav-link" href="">Custom Properties</a></li>
-            <li><a class="nav-link" href="">Feature Query</a></li>
-            <li><a class="nav-link" href="">calc()</a></li>
-            <li><a class="nav-link" href="">Media Queries</a></li>
-            <li><a class="nav-link" href="">Box-sizing</a></li>
+            <li><a class="nav-link" href="#custom_properties">Custom Properties</a></li>
+            <li><a class="nav-link" href="#feature_query">Feature Query</a></li>
+            <li><a class="nav-link" href="#calc()">calc()</a></li>
+            <li><a class="nav-link" href="#media_queries">Media Queries</a></li>
+            <li><a class="nav-link" href="#Box-sizing">Box-sizing</a></li>
         </ul>
     </nav>
-
-    <!-- TODO add link to mdn resource used for this project -->
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
