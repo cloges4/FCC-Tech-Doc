@@ -11,7 +11,7 @@
 </head>
 <!-- TODO code blocks need coloring -->
 <!-- FIXME code block spacing -->
-<!-- FIXME Change browser support to tables -->
+<!-- REPLACE Change browser support to tables -->
 <!-- TODO review sections add needed markup -->
 
 <body>
@@ -21,13 +21,15 @@
                 <h2>Custom Properties</h2>
             </header>
             <p>CSS variables are entities defined by CSS authors that contain specific values to be reused throughout a
-                document. They are set using custom property notation (e.g., --main-color: black;) and are accessed
-                using the var() function (e.g., color: var(--main-color);).</p>
+                document. They are set using custom property notation (e.g., <code
+                    class="code-snippet">--main-color: black;</code>) and are accessed
+                using the <code class="code-snippet">var() function (e.g., color: var(--main-color);)</code>.</p>
             <p>Complex websites have very large amounts of CSS, often with a lot of repeated values. For example, the
                 same color might be used in hundreds of different places, requiring global search and replace if that
                 color needs to change. CSS variables allow a value to be stored in one place, then referenced in
                 multiple other places. An additional benefit is semantic identifiers. For example, --main-text-color is
-                easier to understand than #00ff00, especially if this same color is also used in other contexts.</p>
+                easier to understand than <code class="code-snippet">#00ff00</code>, especially if this same color is
+                also used in other contexts.</p>
             <p>CSS variables are subject to the cascade and inherit their value from their parent.</p>
 
             <h3>Basic usage</h3>
@@ -87,7 +89,8 @@
             <p>Notice the repetition in the CSS. The background color is set to brown in several places. For some CSS
                 declarations, it is possible to declare this higher in the cascade and let CSS inheritance solve this
                 problem naturally. For non-trivial projects, this is not always possible. By declaring a variable on the
-                :root pseudo-class, a CSS author can reduce the need for repetition by using the variable.</p>
+                <code class="code-snippet">:root pseudo-class</code>, a CSS author can reduce the need for repetition by
+                using the variable.</p>
 
             <h4>Example 2</h4>
             <code class="code-block">
@@ -152,8 +155,8 @@
                 be placed at the top level of your code or nested inside any other conditional group at-rule.</p>
             <p>The <code class="code-snippet">@supports</code> at-rule associates a block of statements with a supports
                 condition. The supports condition consists of one or more name-value pairs combined by conjunctions
-                <span class="code-snippet">(and)</span>, disjunctions <span class="code-snippet">(or)</span>, and/or
-                negations <span class="code-snippet">(not)</span>. Precedence of operators can be defined with
+                <code class="code-snippet">(and)</code>, disjunctions <code class="code-snippet">(or)</code>, and/or
+                negations <code class="code-snippet">(not)</code>. Precedence of operators can be defined with
                 parentheses.</p>
             <p>In JavaScript, <code class="code-snippet">@supports</code> can be accessed via the CSS object model
                 interface CSSSupportsRule.</p>
@@ -200,9 +203,10 @@
             <header>
                 <h2>calc()</h2>
             </header>
-            <p>The calc() CSS function lets you perform calculations when specifying CSS property values. It can be used
+            <p>The <code class="code-snippet">calc()</code> CSS function lets you perform calculations when specifying CSS property values. It can be used
                 anywhere a length, frequency, angle, time, percentage, number, or integer is allowed.</p>
-            <p>The calc() function takes a single expression as its parameter, with the expression's result used as the
+            <p>The <code
+                    class="code-snippet">calc()</code> function takes a single expression as its parameter, with the expression's result used as the
                 value. The expression can be any simple expression combining the following operators, using standard
                 operator precedence rules:</p>
 
@@ -238,7 +242,7 @@
 
             <h4>Example 2</h4>
 
-            <p>Another use case for calc() is to help ensure that form fields fit in the available space, without
+            <p>Another use case for <code class="code-snippet">calc()</code> is to help ensure that form fields fit in the available space, without
                 extruding past the edge of their container, while maintaining an appropriate margin.</p>
 
             <code class="code-block">
@@ -271,9 +275,9 @@
             <header>
                 <h2>Media Queries</h2>
             </header>
-            <p>The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more
+            <p>The <code class="code-snippet">@media</code> CSS at-rule can be used to apply part of a style sheet based on the result of one or more
                 media queries.</p>
-            <p>The @media at-rule may be placed at the top level of your code or nested inside any other conditional
+            <p>The <code class="code-snippet">@media</code> at-rule may be placed at the top level of your code or nested inside any other conditional
                 group at-rule.</p>
             <h4>Example 1</h4>
             <code class="code-block">
