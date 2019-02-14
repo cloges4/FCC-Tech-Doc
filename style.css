@@ -6,3 +6,54 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: .2rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+/* NAVBAR */
+
+#navbar {
+  /* REPLACE bg color */
+  background-color: tomato;
+}
+
+#navbar h1 {
+  margin-left: 1rem;
+}
+
+#nav {
+  margin-left: 1rem;
+  padding: 0;
+}
+
+#nav li {
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 1.25rem;
+}
+
+/* MAIN-DOC */
+
+#main-doc {
+  padding: 1.5rem;
+  /* REPLACE bg color */
+  background-color: chocolate;
+}
+
+
+/* Code blocks */
+
+.code-block {
+  background-color: #555;
+}
