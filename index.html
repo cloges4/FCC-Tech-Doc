@@ -8,13 +8,25 @@
     <!-- TODO Choose color see about implenting for other browsers -->
     <meta name="theme-color" content="#000">
     <title>CSS Features</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <!-- TODO code blocks need coloring -->
 <!-- FIXME code block spacing -->
 <!-- REPLACE Change browser support to tables -->
-<!-- TODO review sections add needed markup -->
 
 <body>
+    <nav id="navbar">
+        <header>
+            <h1>CSS Features</h1>
+        </header>
+        <ul id="nav">
+            <li><a class="nav-link" href="#custom_properties">Custom Properties</a></li>
+            <li><a class="nav-link" href="#feature_query">Feature Query</a></li>
+            <li><a class="nav-link" href="#calc()">calc()</a></li>
+            <li><a class="nav-link" href="#media_queries">Media Queries</a></li>
+            <li><a class="nav-link" href="#Box-sizing">Box-sizing</a></li>
+        </ul>
+    </nav>
     <main id="main-doc">
         <section id="custom_properties" class="main-section">
             <header>
@@ -34,58 +46,61 @@
 
             <h3>Basic usage</h3>
             <h4>Declaring a variable:</h4>
-            <code class="code-block">
-                element { <br>
-                --main-bg-color: brown; <br>
-                } <br>
-            </code>
+            <div class="code-block">
+                <code>
+                    element { <br>
+                    --main-bg-color: brown; <br>
+                    } <br>
+                </code>
+            </div>
 
             <h4>Using the variable:</h4>
-            <code class="code-block">
-                element { <br>
-                background-color: var(--main-bg-color); <br>
-                } <br>
-            </code>
-
+            <div class="code-block">
+                <code>
+                    element { <br>
+                    background-color: var(--main-bg-color); <br>
+                    } <br>
+                </code>
+            </div>
             <h4>Example 1</h4>
             <p>Let's start with this simple CSS that applies the same color to elements of different classes:</p>
+            <div class="code-block">
+                <code>
+                    .one { <br>
+                    color: white; <br>
+                    background-color: brown; <br>
+                    margin: 10px; <br>
+                    width: 50px; <br>
+                    height: 50px; <br>
+                    display: inline-block; <br>
+                    } <br>
 
-            <code class="code-block">
-                .one { <br>
-                color: white; <br>
-                background-color: brown; <br>
-                margin: 10px; <br>
-                width: 50px; <br>
-                height: 50px; <br>
-                display: inline-block; <br>
-                } <br>
+                    .two { <br>
+                    color: white; <br>
+                    background-color: black; <br>
+                    margin: 10px; <br>
+                    width: 150px; <br>
+                    height: 70px; <br>
+                    display: inline-block; <br>
+                    } <br>
+                    .three { <br>
+                    color: white; <br>
+                    background-color: brown; <br>
+                    margin: 10px; <br>
+                    width: 75px; <br>
+                    } <br>
+                    .four { <br>
+                    color: white; <br>
+                    background-color: brown; <br>
+                    margin: 10px; <br>
+                    width: 100px; <br>
+                    } <br>
 
-                .two { <br>
-                color: white; <br>
-                background-color: black; <br>
-                margin: 10px; <br>
-                width: 150px; <br>
-                height: 70px; <br>
-                display: inline-block; <br>
-                } <br>
-                .three { <br>
-                color: white; <br>
-                background-color: brown; <br>
-                margin: 10px; <br>
-                width: 75px; <br>
-                } <br>
-                .four { <br>
-                color: white; <br>
-                background-color: brown; <br>
-                margin: 10px; <br>
-                width: 100px; <br>
-                } <br>
-
-                .five { <br>
-                background-color: brown; <br>
-                } <br>
-            </code>
-
+                    .five { <br>
+                    background-color: brown; <br>
+                    } <br>
+                </code>
+            </div>
             <p>Notice the repetition in the CSS. The background color is set to brown in several places. For some CSS
                 declarations, it is possible to declare this higher in the cascade and let CSS inheritance solve this
                 problem naturally. For non-trivial projects, this is not always possible. By declaring a variable on the
@@ -93,45 +108,47 @@
                 using the variable.</p>
 
             <h4>Example 2</h4>
-            <code class="code-block">
-                :root { <br>
-                --main-bg-color: brown; <br>
-                } <br>
+            <div class="code-block">
+                <code>
+                    :root { <br>
+                    --main-bg-color: brown; <br>
+                    } <br>
 
-                .one { <br>
-                color: white; <br>
-                background-color: var(--main-bg-color); <br>
-                margin: 10px; <br>
-                width: 50px; <br>
-                height: 50px; <br>
-                display: inline-block; <br>
-                } <br>
+                    .one { <br>
+                    color: white; <br>
+                    background-color: var(--main-bg-color); <br>
+                    margin: 10px; <br>
+                    width: 50px; <br>
+                    height: 50px; <br>
+                    display: inline-block; <br>
+                    } <br>
 
-                .two { <br>
-                color: white; <br>
-                background-color: black; <br>
-                margin: 10px; <br>
-                width: 150px; <br>
-                height: 70px; <br>
-                display: inline-block; <br>
-                } <br>
-                .three { <br>
-                color: white; <br>
-                background-color: var(--main-bg-color); <br>
-                margin: 10px; <br>
-                width: 75px; <br>
-                } <br>
-                .four { <br>
-                color: white; <br>
-                background-color: var(--main-bg-color); <br>
-                margin: 10px; <br>
-                width: 100px; <br>
-                } <br>
+                    .two { <br>
+                    color: white; <br>
+                    background-color: black; <br>
+                    margin: 10px; <br>
+                    width: 150px; <br>
+                    height: 70px; <br>
+                    display: inline-block; <br>
+                    } <br>
+                    .three { <br>
+                    color: white; <br>
+                    background-color: var(--main-bg-color); <br>
+                    margin: 10px; <br>
+                    width: 75px; <br>
+                    } <br>
+                    .four { <br>
+                    color: white; <br>
+                    background-color: var(--main-bg-color); <br>
+                    margin: 10px; <br>
+                    width: 100px; <br>
+                    } <br>
 
-                .five { <br>
-                background-color: var(--main-bg-color); <br>
-                } <br>
-            </code>
+                    .five { <br>
+                    background-color: var(--main-bg-color); <br>
+                    } <br>
+                </code>
+            </div>
 
             <aside class="browser-support">
                 <ul>
@@ -165,25 +182,29 @@
 
             <h3>Syntax</h3>
             <h4>Example 1</h4>
-
-            <code class="code-block">
-                @supports (display: grid) { <br>
-                div { <br>
-                display: grid; <br>
-                } <br>
-                } <br>
-            </code>
+            <div class="code-block">
+                <code>
+                    @supports (display: grid) { <br>
+                    div { <br>
+                    display: grid; <br>
+                    } <br>
+                    } <br>
+                </code>
+            </div>
             <p>The above example checks to see if the browser support CSS-grid if yes, then the styles will be applied,
                 if no then the block will be ignored.</p>
             <h4>Example 2</h4>
-            <code class="code-block">
-                @supports not (display: grid) { <br>
-                div { <br>
-                float: right; <br>
-                } <br>
-                } <br>
-            </code>
-            <p>The above example checks to see if the browser does not support CSS-grid if it does not, then the styles
+            <div class="code-block">
+                <code>
+                    @supports not (display: grid) { <br>
+                    div { <br>
+                    float: right; <br>
+                    } <br>
+                    } <br>
+                </code>
+            </div>
+            <p>The above example checks to see if the browser does not support CSS-grid if it does not, then the
+                styles
                 will be applied, if it does support CSS-grid then the block will be ignored.</p>
 
             <aside class="browser-support">
@@ -203,10 +224,11 @@
             <header>
                 <h2>calc()</h2>
             </header>
-            <p>The <code class="code-snippet">calc()</code> CSS function lets you perform calculations when specifying CSS property values. It can be used
+            <p>The <code class="code-snippet">calc()</code> CSS function lets you perform calculations when specifying
+                CSS property values. It can be used
                 anywhere a length, frequency, angle, time, percentage, number, or integer is allowed.</p>
-            <p>The <code
-                    class="code-snippet">calc()</code> function takes a single expression as its parameter, with the expression's result used as the
+            <p>The <code class="code-snippet">calc()</code> function takes a single expression as its parameter, with
+                the expression's result used as the
                 value. The expression can be any simple expression combining the following operators, using standard
                 operator precedence rules:</p>
 
@@ -225,40 +247,43 @@
             <p>calc() makes it easy to position an object with a set margin. In this example, the CSS creates a banner
                 that stretches across the window, with a 40-pixel gap between both sides of the banner and the edges of
                 the window:</p>
-
-            <code class="code-block">
-                .banner { <br>
-                position: absolute; <br>
-                left: 40px; <br>
-                width: calc(100% - 80px); <br>
-                border: solid black 1px; <br>
-                box-shadow: 1px 2px; <br>
-                background-color: yellow; <br>
-                padding: 6px; <br>
-                text-align: center; <br>
-                box-sizing: border-box; <br>
-                } <br>
-            </code>
-
+            <div class="code-block">
+                <code>
+                    .banner { <br>
+                    position: absolute; <br>
+                    left: 40px; <br>
+                    width: calc(100% - 80px); <br>
+                    border: solid black 1px; <br>
+                    box-shadow: 1px 2px; <br>
+                    background-color: yellow; <br>
+                    padding: 6px; <br>
+                    text-align: center; <br>
+                    box-sizing: border-box; <br>
+                    } <br>
+                </code>
+            </div>
             <h4>Example 2</h4>
 
-            <p>Another use case for <code class="code-snippet">calc()</code> is to help ensure that form fields fit in the available space, without
+            <p>Another use case for <code class="code-snippet">calc()</code> is to help ensure that form fields fit
+                in
+                the available space, without
                 extruding past the edge of their container, while maintaining an appropriate margin.</p>
 
-            <code class="code-block">
-                input { <br>
-                padding: 2px; <br>
-                display: block; <br>
-                width: calc(100% - 1em); <br>
-                } <br>
+            <div class="code-block">
+                <code>
+                    input { <br>
+                    padding: 2px; <br>
+                    display: block; <br>
+                    width: calc(100% - 1em); <br>
+                    } <br>
 
-                #formbox { <br>
-                width: calc(100% / 6); <br>
-                border: 1px solid black; <br>
-                padding: 4px; <br>
-                } <br>
-            </code>
-
+                    #formbox { <br>
+                    width: calc(100% / 6); <br>
+                    border: 1px solid black; <br>
+                    padding: 4px; <br>
+                    } <br>
+                </code>
+            </div>
             <aside class="browser-support">
                 <ul>
                     <li>IE: 9 (partial support)</li>
@@ -275,51 +300,56 @@
             <header>
                 <h2>Media Queries</h2>
             </header>
-            <p>The <code class="code-snippet">@media</code> CSS at-rule can be used to apply part of a style sheet based on the result of one or more
+            <p>The <code class="code-snippet">@media</code> CSS at-rule can be used to apply part of a style sheet based
+                on the result of one or more
                 media queries.</p>
-            <p>The <code class="code-snippet">@media</code> at-rule may be placed at the top level of your code or nested inside any other conditional
+            <p>The <code class="code-snippet">@media</code> at-rule may be placed at the top level of your code or
+                nested inside any other conditional
                 group at-rule.</p>
+
             <h4>Example 1</h4>
-            <code class="code-block">
-                /* At the top level of your code */ <br>
-                @media screen and (min-width: 900px) { <br>
-                article { <br>
-                padding: 1rem 3rem; <br>
-                } <br>
-                } <br>
+            <div class="code-block">
+                <code>
+                    /* At the top level of your code */ <br>
+                    @media screen and (min-width: 900px) { <br>
+                    article { <br>
+                    padding: 1rem 3rem; <br>
+                    } <br>
+                    } <br>
 
-                /* Nested within another conditional at-rule */ <br>
-                @supports (display: flex) { <br>
-                @media screen and (min-width: 900px) { <br>
-                article { <br>
-                display: flex; <br>
-                } <br>
-                } <br>
-                } <br>
-            </code>
-
+                    /* Nested within another conditional at-rule */ <br>
+                    @supports (display: flex) { <br>
+                    @media screen and (min-width: 900px) { <br>
+                    article { <br>
+                    display: flex; <br>
+                    } <br>
+                    } <br>
+                    } <br>
+                </code>
+            </div>
             <h4>Example 2</h4>
-            <code class="code-block">
-                @media print { <br>
-                body { font-size: 10pt; } <br>
-                } <br>
+            <div class="code-block">
+                <code>
+                    @media print { <br>
+                    body { font-size: 10pt; } <br>
+                    } <br>
 
-                @media screen { <br>
-                body { font-size: 13px; } <br>
-                } <br>
+                    @media screen { <br>
+                    body { font-size: 13px; } <br>
+                    } <br>
 
-                @media screen, print { <br>
-                body { line-height: 1.2; } <br>
-                } <br>
+                    @media screen, print { <br>
+                    body { line-height: 1.2; } <br>
+                    } <br>
 
-                @media only screen <br>
-                and (min-width: 320px) <br>
-                and (max-width: 480px) <br>
-                and (resolution: 150dpi) { <br>
-                body { line-height: 1.4; } <br>
-                } <br>
-            </code>
-
+                    @media only screen <br>
+                    and (min-width: 320px) <br>
+                    and (max-width: 480px) <br>
+                    and (resolution: 150dpi) { <br>
+                    body { line-height: 1.4; } <br>
+                    } <br>
+                </code>
+            </div>
             <aside class="browser-support">
                 <ul>
                     <li>IE: 9</li>
@@ -355,24 +385,29 @@
             </ul>
 
             <h4>Example 1</h4>
-            <code class="code-block">
-                .content-box { <br>
-                box-sizing: content-box; <br>
-                /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px <br>
-                Total height: 80px + (2 * 20px) + (2 * 8px) = 136px <br>
-                Content box width: 160px <br>
-                Content box height: 80px */ <br>
-                } <br>
-            </code>
+            <div class="code-block">
+                <code>
+                    .content-box { <br>
+                    box-sizing: content-box; <br>
+                    /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px <br>
+                    Total height: 80px + (2 * 20px) + (2 * 8px) = 136px <br>
+                    Content box width: 160px <br>
+                    Content box height: 80px */ <br>
+                    } <br>
+                </code>
+            </div>
+
             <h4>Example 2</h4>
-            <code class="code-block">
-                .border-box { <br>
-                box-sizing: border-box; <br>
-                /* Total width: 160px <br>
-                Total height: 80px <br>
-                Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px <br>
-                Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */ <br>
-            </code>
+            <div class="code-block">
+                <code>
+                    .border-box { <br>
+                    box-sizing: border-box; <br>
+                    /* Total width: 160px <br>
+                    Total height: 80px <br>
+                    Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px <br>
+                    Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */ <br>
+                </code>
+            </div>
             <aside class="browser-support">
                 <ul>
                     <li>IE: 8</li>
@@ -388,18 +423,7 @@
         </section>
 
     </main>
-    <nav id="navbar">
-        <header>
-            <h1>CSS Features</h1>
-        </header>
-        <ul>
-            <li><a class="nav-link" href="#custom_properties">Custom Properties</a></li>
-            <li><a class="nav-link" href="#feature_query">Feature Query</a></li>
-            <li><a class="nav-link" href="#calc()">calc()</a></li>
-            <li><a class="nav-link" href="#media_queries">Media Queries</a></li>
-            <li><a class="nav-link" href="#Box-sizing">Box-sizing</a></li>
-        </ul>
-    </nav>
+
 
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
