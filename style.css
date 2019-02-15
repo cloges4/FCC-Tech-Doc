@@ -1,3 +1,6 @@
+/* CSS Variables */
+
+
 * {
   box-sizing: border-box;
 }
@@ -12,6 +15,8 @@ a {
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
+  background-color:#fafafa;
   margin: 0;
   line-height: 1.5;
   letter-spacing: .2rem;
@@ -22,8 +27,7 @@ body {
 /* NAVBAR */
 
 #navbar {
-  /* REPLACE bg color */
-  background-color: tomato;
+
 }
 
 #navbar h1 {
@@ -51,14 +55,64 @@ body {
 
 #main-doc {
   padding: 1.5rem;
-  /* REPLACE bg color */
-  background-color: chocolate;
 }
 
 
-/* Code blocks */
+/* Code  */
+
+.code-snippet {
+  color: #fafafa;
+  background-color: rgba(26, 26, 26, .7);
+  padding: .1rem;
+}
 
 .code-block {
-  /* REPLACE bg color */
-  background-color: #555;
+    text-align: left;
+  white-space: pre;
+    line-height: 2;
+    border-radius:5px;
+  color: grey;
+  background-color: #1a1a1a;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.class,
+.id {
+  color: #f5d67b;
+}
+
+.selector {
+  color: #9c27b0;
+}
+
+.property {
+  color: #72e0d1;
+}
+
+.number {
+  color: #fc9463;
+}
+
+.unit {
+  color: #eeb902;
+}
+
+.comment {
+    color: #5e7671;
+    font-style: italic;
+}
+
+.punctuation {
+  color: #72e0d1;
+}
+
+.value {
+color: #fc9463;
+}
+
+.special {
+  color: #9c27b0;
 }

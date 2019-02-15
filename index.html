@@ -8,6 +8,7 @@
     <!-- TODO Choose color see about implenting for other browsers -->
     <meta name="theme-color" content="#000">
     <title>CSS Features</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Source+Code+Pro" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <!-- TODO code blocks need coloring -->
@@ -50,57 +51,62 @@
             <h4>Declaring a variable:</h4>
             <div class="code-block">
                 <code>
-                    element { <br>
-                    --main-bg-color: brown; <br>
-                    } <br>
+                    <span class="selector">element</span> <span class="punctuation">{</span>
+                        --main-bg-color<span class="punctuation">:</span> <span class="value">brown</span><span class="punctuation">;</span>
+                    <span class="punctuation">}</span>
                 </code>
             </div>
 
             <h4>Using the variable:</h4>
             <div class="code-block">
                 <code>
-                    element { <br>
-                    background-color: var(--main-bg-color); <br>
-                    } <br>
+                    <span class="selector">element</span> <span class="punctuation">{</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span class="punctuation">;</span>
+                    <span class="punctuation">}</span>
                 </code>
             </div>
             <h4>Example 1</h4>
             <p>Let's start with this simple CSS that applies the same color to elements of different classes:</p>
             <div class="code-block">
                 <code>
-                    .one { <br>
-                    color: white; <br>
-                    background-color: brown; <br>
-                    margin: 10px; <br>
-                    width: 50px; <br>
-                    height: 50px; <br>
-                    display: inline-block; <br>
-                    } <br>
+                    <span class="class">.one</span> <span class="punctuation">{</span>
+                        <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span class="punctuation">;</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">brown</span><span
+                            class="punctuation">;</span>
+                        <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span class="unit">px</span><span
+                            class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="number">50</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">height</span><span class="punctuation">:</span> <span class="number">50</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">display</span><span class="punctuation">:</span> <span class="value">inline-block</span><span
+                            class="punctuation">;</span>
+                    <span class="punctuation">}</span>
 
-                    .two { <br>
-                    color: white; <br>
-                    background-color: black; <br>
-                    margin: 10px; <br>
-                    width: 150px; <br>
-                    height: 70px; <br>
-                    display: inline-block; <br>
-                    } <br>
-                    .three { <br>
-                    color: white; <br>
-                    background-color: brown; <br>
-                    margin: 10px; <br>
-                    width: 75px; <br>
-                    } <br>
-                    .four { <br>
-                    color: white; <br>
-                    background-color: brown; <br>
-                    margin: 10px; <br>
-                    width: 100px; <br>
-                    } <br>
+                    .two {  
+                    color: white;  
+                    background-color: black;  
+                    margin: 10px;  
+                    width: 150px;  
+                    height: 70px;  
+                    display: inline-block;  
+                    }  
+                    .three {  
+                    color: white;  
+                    background-color: brown;  
+                    margin: 10px;  
+                    width: 75px;  
+                    }  
+                    .four {  
+                    color: white;  
+                    background-color: brown;  
+                    margin: 10px;  
+                    width: 100px;  
+                    }  
 
-                    .five { <br>
-                    background-color: brown; <br>
-                    } <br>
+                    .five {  
+                    background-color: brown;  
+                    }  
                 </code>
             </div>
             <p>Notice the repetition in the CSS. The background color is set to brown in several places. For some CSS
@@ -112,43 +118,43 @@
             <h4>Example 2</h4>
             <div class="code-block">
                 <code>
-                    :root { <br>
-                    --main-bg-color: brown; <br>
-                    } <br>
+                    :root {  
+                    --main-bg-color: brown;  
+                    }  
 
-                    .one { <br>
-                    color: white; <br>
-                    background-color: var(--main-bg-color); <br>
-                    margin: 10px; <br>
-                    width: 50px; <br>
-                    height: 50px; <br>
-                    display: inline-block; <br>
-                    } <br>
+                    .one {  
+                    color: white;  
+                    background-color: var(--main-bg-color);  
+                    margin: 10px;  
+                    width: 50px;  
+                    height: 50px;  
+                    display: inline-block;  
+                    }  
 
-                    .two { <br>
-                    color: white; <br>
-                    background-color: black; <br>
-                    margin: 10px; <br>
-                    width: 150px; <br>
-                    height: 70px; <br>
-                    display: inline-block; <br>
-                    } <br>
-                    .three { <br>
-                    color: white; <br>
-                    background-color: var(--main-bg-color); <br>
-                    margin: 10px; <br>
-                    width: 75px; <br>
-                    } <br>
-                    .four { <br>
-                    color: white; <br>
-                    background-color: var(--main-bg-color); <br>
-                    margin: 10px; <br>
-                    width: 100px; <br>
-                    } <br>
+                    .two {  
+                    color: white;  
+                    background-color: black;  
+                    margin: 10px;  
+                    width: 150px;  
+                    height: 70px;  
+                    display: inline-block;  
+                    }  
+                    .three {  
+                    color: white;  
+                    background-color: var(--main-bg-color);  
+                    margin: 10px;  
+                    width: 75px;  
+                    }  
+                    .four {  
+                    color: white;  
+                    background-color: var(--main-bg-color);  
+                    margin: 10px;  
+                    width: 100px;  
+                    }  
 
-                    .five { <br>
-                    background-color: var(--main-bg-color); <br>
-                    } <br>
+                    .five {  
+                    background-color: var(--main-bg-color);  
+                    }  
                 </code>
             </div>
 
@@ -186,11 +192,11 @@
             <h4>Example 1</h4>
             <div class="code-block">
                 <code>
-                    @supports (display: grid) { <br>
-                    div { <br>
-                    display: grid; <br>
-                    } <br>
-                    } <br>
+                    @supports (display: grid) {  
+                    div {  
+                    display: grid;  
+                    }  
+                    }  
                 </code>
             </div>
             <p>The above example checks to see if the browser support CSS-grid if yes, then the styles will be applied,
@@ -198,11 +204,11 @@
             <h4>Example 2</h4>
             <div class="code-block">
                 <code>
-                    @supports not (display: grid) { <br>
-                    div { <br>
-                    float: right; <br>
-                    } <br>
-                    } <br>
+                    @supports not (display: grid) {  
+                    div {  
+                    float: right;  
+                    }  
+                    }  
                 </code>
             </div>
             <p>The above example checks to see if the browser does not support CSS-grid if it does not, then the
@@ -251,17 +257,17 @@
                 the window:</p>
             <div class="code-block">
                 <code>
-                    .banner { <br>
-                    position: absolute; <br>
-                    left: 40px; <br>
-                    width: calc(100% - 80px); <br>
-                    border: solid black 1px; <br>
-                    box-shadow: 1px 2px; <br>
-                    background-color: yellow; <br>
-                    padding: 6px; <br>
-                    text-align: center; <br>
-                    box-sizing: border-box; <br>
-                    } <br>
+                    .banner {  
+                    position: absolute;  
+                    left: 40px;  
+                    width: calc(100% - 80px);  
+                    border: solid black 1px;  
+                    box-shadow: 1px 2px;  
+                    background-color: yellow;  
+                    padding: 6px;  
+                    text-align: center;  
+                    box-sizing: border-box;  
+                    }  
                 </code>
             </div>
             <h4>Example 2</h4>
@@ -273,17 +279,17 @@
 
             <div class="code-block">
                 <code>
-                    input { <br>
-                    padding: 2px; <br>
-                    display: block; <br>
-                    width: calc(100% - 1em); <br>
-                    } <br>
+                    input {  
+                    padding: 2px;  
+                    display: block;  
+                    width: calc(100% - 1em);  
+                    }  
 
-                    #formbox { <br>
-                    width: calc(100% / 6); <br>
-                    border: 1px solid black; <br>
-                    padding: 4px; <br>
-                    } <br>
+                    #formbox {  
+                    width: calc(100% / 6);  
+                    border: 1px solid black;  
+                    padding: 4px;  
+                    }  
                 </code>
             </div>
             <aside class="browser-support">
@@ -312,44 +318,44 @@
             <h4>Example 1</h4>
             <div class="code-block">
                 <code>
-                    /* At the top level of your code */ <br>
-                    @media screen and (min-width: 900px) { <br>
-                    article { <br>
-                    padding: 1rem 3rem; <br>
-                    } <br>
-                    } <br>
+                    /* At the top level of your code */  
+                    @media screen and (min-width: 900px) {  
+                    article {  
+                    padding: 1rem 3rem;  
+                    }  
+                    }  
 
-                    /* Nested within another conditional at-rule */ <br>
-                    @supports (display: flex) { <br>
-                    @media screen and (min-width: 900px) { <br>
-                    article { <br>
-                    display: flex; <br>
-                    } <br>
-                    } <br>
-                    } <br>
+                    /* Nested within another conditional at-rule */  
+                    @supports (display: flex) {  
+                    @media screen and (min-width: 900px) {  
+                    article {  
+                    display: flex;  
+                    }  
+                    }  
+                    }  
                 </code>
             </div>
             <h4>Example 2</h4>
             <div class="code-block">
                 <code>
-                    @media print { <br>
-                    body { font-size: 10pt; } <br>
-                    } <br>
+                    @media print {  
+                    body { font-size: 10pt; }  
+                    }  
 
-                    @media screen { <br>
-                    body { font-size: 13px; } <br>
-                    } <br>
+                    @media screen {  
+                    body { font-size: 13px; }  
+                    }  
 
-                    @media screen, print { <br>
-                    body { line-height: 1.2; } <br>
-                    } <br>
+                    @media screen, print {  
+                    body { line-height: 1.2; }  
+                    }  
 
-                    @media only screen <br>
-                    and (min-width: 320px) <br>
-                    and (max-width: 480px) <br>
-                    and (resolution: 150dpi) { <br>
-                    body { line-height: 1.4; } <br>
-                    } <br>
+                    @media only screen  
+                    and (min-width: 320px)  
+                    and (max-width: 480px)  
+                    and (resolution: 150dpi) {  
+                    body { line-height: 1.4; }  
+                    }  
                 </code>
             </div>
             <aside class="browser-support">
@@ -389,25 +395,25 @@
             <h4>Example 1</h4>
             <div class="code-block">
                 <code>
-                    .content-box { <br>
-                    box-sizing: content-box; <br>
-                    /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px <br>
-                    Total height: 80px + (2 * 20px) + (2 * 8px) = 136px <br>
-                    Content box width: 160px <br>
-                    Content box height: 80px */ <br>
-                    } <br>
+                    .content-box {  
+                    box-sizing: content-box;  
+                    /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px  
+                    Total height: 80px + (2 * 20px) + (2 * 8px) = 136px  
+                    Content box width: 160px  
+                    Content box height: 80px */  
+                    }  
                 </code>
             </div>
 
             <h4>Example 2</h4>
             <div class="code-block">
                 <code>
-                    .border-box { <br>
-                    box-sizing: border-box; <br>
-                    /* Total width: 160px <br>
-                    Total height: 80px <br>
-                    Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px <br>
-                    Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */ <br>
+                    .border-box {  
+                    box-sizing: border-box;  
+                    /* Total width: 160px  
+                    Total height: 80px  
+                    Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px  
+                    Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */  
                 </code>
             </div>
             <aside class="browser-support">
