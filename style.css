@@ -1,7 +1,5 @@
-/* CSS Variables */
-
-
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -15,11 +13,11 @@ a {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color:#fafafa;
+  font-family: "Roboto", sans-serif;
+  background-color: #fafafa;
   margin: 0;
   line-height: 1.5;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
@@ -27,7 +25,6 @@ body {
 /* NAVBAR */
 
 #navbar {
-
 }
 
 #navbar h1 {
@@ -38,7 +35,7 @@ body {
   position: fixed;
 }
 
-#nav  {
+#nav {
   margin-left: 1rem;
   padding: 0;
 }
@@ -57,26 +54,25 @@ body {
   padding: 1.5rem;
 }
 
-
 /* Code  */
 
 .code-snippet {
   color: #fafafa;
-  background-color: rgba(26, 26, 26, .7);
-  padding: .1rem;
+  background-color: rgba(26, 26, 26, 0.7);
+  padding: 0.1rem;
 }
 
 .code-block {
-    text-align: left;
+  text-align: left;
   white-space: pre;
-    line-height: 2;
-    border-radius:5px;
+  line-height: 2;
+  border-radius: 5px;
   color: grey;
   background-color: #1a1a1a;
 }
 
 code {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 
 .class,
@@ -101,8 +97,8 @@ code {
 }
 
 .comment {
-    color: #5e7671;
-    font-style: italic;
+  color: #5e7671;
+  font-style: italic;
 }
 
 .punctuation {
@@ -110,9 +106,44 @@ code {
 }
 
 .value {
-color: #fc9463;
+  color: #fc9463;
 }
 
 .special {
-  color: #9c27b0;
+  color: #ddda0f;
+}
+
+/* browser support */
+
+.browser-support {
+}
+
+table {
+  background-color: #2b2e31;
+  width: 300px;
+  height: 200px;
+}
+
+tr {
+  text-align: center;
+  background-color: #fafafa;
+  color: #25292d;
+}
+
+.support {
+  background-color: #39b54a;
+}
+
+.partial {
+  background-color: #a8bd04;
+}
+
+.no-support {
+  background-color: #c44230;
+}
+
+.support,
+.partial,
+.no-support {
+  color: #fafafa;
 }
