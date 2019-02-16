@@ -83,30 +83,48 @@
                             class="punctuation">;</span>
                     <span class="punctuation">}</span>
 
-                    .two {  
-                    color: white;  
-                    background-color: black;  
-                    margin: 10px;  
-                    width: 150px;  
-                    height: 70px;  
-                    display: inline-block;  
-                    }  
-                    .three {  
-                    color: white;  
-                    background-color: brown;  
-                    margin: 10px;  
-                    width: 75px;  
-                    }  
-                    .four {  
-                    color: white;  
-                    background-color: brown;  
-                    margin: 10px;  
-                    width: 100px;  
-                    }  
+                    <span class="class">.two</span> {
+                        <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
+                            class="punctuation">;</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">black</span><span
+                            class="punctuation">;</span>
+                        <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="number">150</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">height</span><span class="punctuation">:</span> <span class="number">70</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">display</span><span class="punctuation">:</span> <span class="value">inline-block</span><span
+                            class="punctuation">;</span>
+                    <span class="punctuation">}</span>
 
-                    .five {  
-                    background-color: brown;  
-                    }  
+                    <span class="class">.three</span> <span class="punctuation">{</span>
+                        <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
+                            class="punctuation">;</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">brown</span><span
+                            class="punctuation">;</span>
+                        <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="number">150</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                    <span class="punctuation">}</span>
+
+
+                    <span class="class">.four</span> <span class="punctuation">{</span>
+                        <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
+                            class="punctuation">;</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">brown</span><span
+                            class="punctuation">;</span>
+                        <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="number">100</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                    <span class="punctuation">}</span>
+
+                    <span class="class">.five</span> <span class="punctuation">{</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">brown</span><span
+                            class="punctuation">;</span>
+                    <span class="punctuation">}</span>
                 </code>
             </div>
             <p>Notice the repetition in the CSS. The background color is set to brown in several places. For some CSS
@@ -118,43 +136,70 @@
             <h4>Example 2</h4>
             <div class="code-block">
                 <code>
-                    :root {  
-                    --main-bg-color: brown;  
-                    }  
+                    <span class="selector">:root</span> <span class="punctuation">{</span>
+                        <span>--main-bg-color</span><span class="punctuation">:</span> <span class="value">brown</span><span class="punctuation">;</span>
+                    <span class="punctuation">}</span>
 
-                    .one {  
-                    color: white;  
-                    background-color: var(--main-bg-color);  
-                    margin: 10px;  
-                    width: 50px;  
-                    height: 50px;  
-                    display: inline-block;  
-                    }  
+                    <span class="class">.one</span> <span class="punctuation">{</span>
+                        <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
+                            class="punctuation">;</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span
+                            class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span
+                            class="punctuation">;</span>
+                        <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="number">50</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">height</span><span class="punctuation">:</span> <span class="number">50</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">display</span><span class="punctuation">:</span> <span class="value">inline-block</span><span
+                            class="punctuation">;</span>
+                    <span class="punctuation">}</span>
 
-                    .two {  
-                    color: white;  
-                    background-color: black;  
-                    margin: 10px;  
-                    width: 150px;  
-                    height: 70px;  
-                    display: inline-block;  
-                    }  
-                    .three {  
-                    color: white;  
-                    background-color: var(--main-bg-color);  
-                    margin: 10px;  
-                    width: 75px;  
-                    }  
-                    .four {  
-                    color: white;  
-                    background-color: var(--main-bg-color);  
-                    margin: 10px;  
-                    width: 100px;  
-                    }  
+                    <span class="class">.two</span> {
+                        <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
+                            class="punctuation">;</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">black</span><span
+                            class="punctuation">;</span>
+                        <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="number">150</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">height</span><span class="punctuation">:</span> <span class="number">70</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">display</span><span class="punctuation">:</span> <span class="value">inline-block</span><span
+                            class="punctuation">;</span>
+                    <span class="punctuation">}</span>
 
-                    .five {  
-                    background-color: var(--main-bg-color);  
-                    }  
+                    <span class="class">.three</span> {
+                        <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
+                            class="punctuation">;</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span
+                            class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span
+                            class="punctuation">;</span>
+                        <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="number">75</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                    <span class="punctuation">}</span>
+
+                    <span class="class">.four</span> {
+                        <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
+                            class="punctuation">;</span>
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span
+                            class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span
+                            class="punctuation">;</span>
+                        <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="number">100</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                    <span class="punctuation">}</span>
+
+                    <span class="class">.five</span> {
+                        <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span
+                            class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span
+                            class="punctuation">;</span>
+                    <span class="punctuation">}</span>
                 </code>
             </div>
 
@@ -192,11 +237,14 @@
             <h4>Example 1</h4>
             <div class="code-block">
                 <code>
-                    @supports (display: grid) {  
-                    div {  
-                    display: grid;  
-                    }  
-                    }  
+                    <span class="selector">@supports</span> <span class="punctuation">(</span><span class="property">display</span><span
+                        class="punctuation">:</span> <span class="value">grid</span><span class="punctuation">)</span> <span
+                        class="punctuation">{</span>
+                    <span class="selector">div</span> <span class="punctuation">{</span>
+                        <span class="property">display</span><span class="punctuation">:</span> <span class="value">grid</span><span
+                            class="punctuation">;</span>
+                        <span class="punctuation">}</span>
+                    <span class="punctuation">}</span>
                 </code>
             </div>
             <p>The above example checks to see if the browser support CSS-grid if yes, then the styles will be applied,
@@ -204,11 +252,14 @@
             <h4>Example 2</h4>
             <div class="code-block">
                 <code>
-                    @supports not (display: grid) {  
-                    div {  
-                    float: right;  
-                    }  
-                    }  
+                    <span class="selector">@supports</span> <span class="special">not</span> <span class="punctuation">(</span><span class="property">display</span><span
+                        class="punctuation">:</span> <span class="value">grid</span><span class="punctuation">)</span> <span
+                        class="punctuation">{</span>
+                        <span class="selector">div</span> <span class="punctuation">{</span>
+                            <span class="property">float</span><span class="punctuation">:</span> <span class="value">right</span><span
+                            class="punctuation">;</span>
+                        <span class="punctuation">}</span>
+                    <span class="punctuation">}</span>
                 </code>
             </div>
             <p>The above example checks to see if the browser does not support CSS-grid if it does not, then the
@@ -257,39 +308,55 @@
                 the window:</p>
             <div class="code-block">
                 <code>
-                    .banner {  
-                    position: absolute;  
-                    left: 40px;  
-                    width: calc(100% - 80px);  
-                    border: solid black 1px;  
-                    box-shadow: 1px 2px;  
-                    background-color: yellow;  
-                    padding: 6px;  
-                    text-align: center;  
-                    box-sizing: border-box;  
-                    }  
+
+                <span class="class">.banner</span> <span class="punctuation">{</span>
+                    <span class="property">position</span><span class="punctuation">:</span> <span class="value">absolute</span><span
+                        class="punctuation">;</span>
+                    <span class="property">left</span><span class="punctuation">:</span> <span class="number">40</span><span
+                        class="unit">px</span><span class="punctuation">;</span>
+                    <span class="property">width</span><span class="punctuation">:</span> <span
+                        class="value">calc</span><span class="punctuation"></span>(</span><span
+                        class="number">100</span><span class="unit">%</span> <span
+                        class="unit">-</span> <span class="number">80</span><span
+                        class="unit">px</span><span class="punctuation">)</span><span
+                        class="punctuation">;</span>
+                    <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">yellow</span><span
+                        class="punctuation">;</span>
+                    <span class="property">border</span><span class="punctuation">:</span> <span class="number">1</span><span
+                        class="unit">px</span> <span class="value">solid</span> <span class="value">black</span><span class="punctuation">;</span>
+                    <span class="property">padding</span><span class="punctuation">:</span> <span class="number">6</span><span
+                        class="unit">px</span><span class="punctuation">;</span>
+                    <span class="property">text-align</span><span class="punctuation">:</span> <span class="value">center</span><span
+                        class="punctuation">;</span>
+                    <span class="property">box-sizing</span><span class="punctuation">:</span> <span class="value">border-box</span><span
+                        class="punctuation">;</span>
+                <span class="punctuation">}</span>
                 </code>
             </div>
             <h4>Example 2</h4>
 
             <p>Another use case for <code class="code-snippet">calc()</code> is to help ensure that form fields fit
-                in
-                the available space, without
-                extruding past the edge of their container, while maintaining an appropriate margin.</p>
+                in the available space, without extruding past the edge of their container, while maintaining an appropriate margin.</p>
 
             <div class="code-block">
                 <code>
-                    input {  
-                    padding: 2px;  
-                    display: block;  
-                    width: calc(100% - 1em);  
-                    }  
+                    <span class="selector">input</span> <span class="punctuation">{</span>
+                        <span class="property">padding</span><span class="punctuation">:</span> <span class="number">6</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="value">calc</span><span
+                            class="punctuation"></span>(</span><span class="number">100</span><span class="unit">%</span> <span
+                            class="unit">-</span> <span class="number">1</span><span class="unit">em</span><span
+                            class="punctuation">)</span><span class="punctuation">;</span>
+                    <span class="punctuation">}</span>
 
-                    #formbox {  
-                    width: calc(100% / 6);  
-                    border: 1px solid black;  
-                    padding: 4px;  
-                    }  
+                    <span class="id">#formbox</span> <span class="punctuation">{</span>
+                        <span class="property">padding</span><span class="punctuation">:</span> <span class="number">4</span><span
+                            class="unit">px</span><span class="punctuation">;</span>
+                        <span class="property">width</span><span class="punctuation">:</span> <span class="value">calc</span><span
+                            class="punctuation"></span>(</span><span class="number">100</span><span class="unit">%</span> <span
+                            class="unit">/</span> <span class="number">6</span><span
+                            class="punctuation">)</span><span class="punctuation">;</span>
+                    <span class="punctuation">}</span>
                 </code>
             </div>
             <aside class="browser-support">
@@ -318,45 +385,35 @@
             <h4>Example 1</h4>
             <div class="code-block">
                 <code>
-                    /* At the top level of your code */  
-                    @media screen and (min-width: 900px) {  
-                    article {  
-                    padding: 1rem 3rem;  
-                    }  
-                    }  
+                    <span class="comment">/* At the top level of your code */</span>
+                    <span class="selector">@media</span> <span class="property">screen</span> <span
+                        class="special">and</span> <span class="punctuation">(</span><span
+                        class="property">min-width</span><span class="punctuation">:</span> <span
+                        class="number">900</span><span class="unit">px</span><span
+                        class="punctuation">)</span> <span class="punctuation">{</span>
+                        <span class="selector">article</span> <span class="punctuation">{</span>
+                            <span class="property">padding</span><span class="punctuation">:</span> <span
+                                class="number">1.25</span><span class="unit">rem</span><span
+                                class="punctuation">;</span>
+                        <span class="punctuation">}</span>
+                    <span class="punctuation">}</span>
 
-                    /* Nested within another conditional at-rule */  
-                    @supports (display: flex) {  
-                    @media screen and (min-width: 900px) {  
-                    article {  
-                    display: flex;  
-                    }  
-                    }  
-                    }  
+                    <span class="comment">/* Nested within another conditional at-rule */</span>
+                    <span class="selector">@supports</span> <span class="punctuation">(</span><span class="property">display</span><span
+                        class="punctuation">:</span> <span class="value">flex</span><span class="punctuation">)</span> <span
+                        class="punctuation">{</span>
+                            <span class="selector">@media</span> <span class="property">screen</span> <span class="special">and</span> <span
+                                class="punctuation">(</span><span class="property">min-width</span><span class="punctuation">:</span> <span
+                                class="number">900</span><span class="unit">px</span><span class="punctuation">)</span> <span
+                                class="punctuation">{</span>
+                                    <span class="selector">article</span> <span class="punctuation">{</span>
+                                        <span class="property">display</span><span class="punctuation">:</span> <span
+                                            class="value">flex</span><span class="punctuation">;</span>
+                                    <span class="punctuation">}</span>
+                                <span class="punctuation">}</span>
+                            <span class="punctuation">}</span>
                 </code>
             </div>
-            <h4>Example 2</h4>
-            <div class="code-block">
-                <code>
-                    @media print {  
-                    body { font-size: 10pt; }  
-                    }  
-
-                    @media screen {  
-                    body { font-size: 13px; }  
-                    }  
-
-                    @media screen, print {  
-                    body { line-height: 1.2; }  
-                    }  
-
-                    @media only screen  
-                    and (min-width: 320px)  
-                    and (max-width: 480px)  
-                    and (resolution: 150dpi) {  
-                    body { line-height: 1.4; }  
-                    }  
-                </code>
             </div>
             <aside class="browser-support">
                 <ul>
@@ -395,25 +452,30 @@
             <h4>Example 1</h4>
             <div class="code-block">
                 <code>
-                    .content-box {  
-                    box-sizing: content-box;  
-                    /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px  
-                    Total height: 80px + (2 * 20px) + (2 * 8px) = 136px  
-                    Content box width: 160px  
-                    Content box height: 80px */  
-                    }  
+                    <span class="class">.content-box</span> <span class="punctuation">{</span>
+                        <span class="property">box-sizing</span><span class="punctuation">:</span> <span
+                            class="value">content-box</span><span class="punctuation">;</span>
+                        <span class="comment">/* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
+                        Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
+                        Content box width: 160px
+                        Content box height: 80px */</span>
+                    <span class="punctuation">}</span>
                 </code>
             </div>
 
             <h4>Example 2</h4>
             <div class="code-block">
                 <code>
-                    .border-box {  
-                    box-sizing: border-box;  
-                    /* Total width: 160px  
-                    Total height: 80px  
-                    Content box width: 160px - (2 * 20px) - (2 * 8px) = 104px  
-                    Content box height: 80px - (2 * 20px) - (2 * 8px) = 24px */  
+                    <span class="class">.border-box</span> <span class="punctuation">{</span>
+                        <span class="property">box-sizing</span><span class="punctuation">:</span> <span class="value">border-box</span><span
+                            class="punctuation">;</span>
+                        <span class="comment">/* Total width: 160px
+                        Total height: 80px
+                        Content box width: 160px - (2 * 20px)
+                        - (2 * 8px) = 104px
+                        Content box height: 80px - (2 * 20px)
+                        - (2 * 8px) = 24px */</span>
+                        <span class="punctuation">}</span>
                 </code>
             </div>
             <aside class="browser-support">
