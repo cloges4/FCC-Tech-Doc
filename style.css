@@ -147,3 +147,20 @@ tr {
 .no-support {
   color: #fafafa;
 }
+
+/* Attribution */
+
+#attribution {
+  text-align: center;
+  background-color: #1481ba;
+  color: #fafafa;
+  padding: 1.5rem 0;
+}
+
+#attribution a {
+  color: #1f1f1f;
+}
+
+#attribution a:hover {
+  opacity: 0.7;
+}
