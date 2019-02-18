@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Source+Code+Pro" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- REPLACE Change browser support to tables -->
-
 <body>
     
     <nav id="navbar">
@@ -46,8 +43,7 @@
                 also used in other contexts.</p>
             <p>CSS variables are subject to the cascade and inherit their value from their parent.</p>
 
-            <h3>Basic usage</h3>
-            <h4>Declaring a variable:</h4>
+            <h3>Declaring a variable:</h3>
             <div class="code-block">
                 <code>
                     <span class="selector">element</span> <span class="punctuation">{</span>
@@ -56,7 +52,7 @@
                 </code>
             </div>
 
-            <h4>Using the variable:</h4>
+            <h3>Using the variable:</h3>
             <div class="code-block">
                 <code>
                     <span class="selector">element</span> <span class="punctuation">{</span>
@@ -64,7 +60,7 @@
                     <span class="punctuation">}</span>
                 </code>
             </div>
-            <h4>Example 1</h4>
+            <h3>Example 1</h3>
             <p>Let's start with this simple CSS that applies the same color to elements of different classes:</p>
             <div class="code-block">
                 <code>
@@ -132,7 +128,7 @@
                 <code class="code-snippet">:root pseudo-class</code>, a CSS author can reduce the need for repetition by
                 using the variable.</p>
 
-            <h4>Example 2</h4>
+            <h3>Example 2</h3>
             <div class="code-block">
                 <code>
                     <span class="selector">:root</span> <span class="punctuation">{</span>
@@ -201,8 +197,8 @@
                     <span class="punctuation">}</span>
                 </code>
             </div>
-
-            <aside class="browser-support">
+            
+                <aside class="browser-support">
                 <table>
                     <thead>
                         <tr>
@@ -232,10 +228,12 @@
                         </tr>
                     </tbody>
                 </table>
-            </aside>
-
-            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">Mdn</a>
-            <a class="credit" href="https://caniuse.com/#search=css%20variables">CanIUse</a>
+                <div class="support-buttons">
+                   <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables">Mdn</a>
+                    <a class="credit" href="https://caniuse.com/#search=css%20variables">CanIUse</a>
+                </div>
+                </aside>
+            </div>
         </section>
         <section id="feature_query" class="main-section">
             <header>
@@ -254,8 +252,7 @@
             <p>The most basic supports condition is a simple declaration (a property name followed by a value, separated
                 by a colon). The declaration must be surrounded by parentheses</p>
 
-            <h3>Syntax</h3>
-            <h4>Example 1</h4>
+            <h3>Example 1</h3>
             <div class="code-block">
                 <code>
                     <span class="selector">@supports</span> <span class="punctuation">(</span><span class="property">display</span><span
@@ -270,7 +267,7 @@
             </div>
             <p>The above example checks to see if the browser support CSS-grid if yes, then the styles will be applied,
                 if no then the block will be ignored.</p>
-            <h4>Example 2</h4>
+            <h3>Example 2</h3>
             <div class="code-block">
                 <code>
                     <span class="selector">@supports</span> <span class="special">not</span> <span class="punctuation">(</span><span class="property">display</span><span
@@ -317,10 +314,11 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="support-buttons">
+                    <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">Mdn</a>
+                    <a class="credit" href="https://caniuse.com/#search=%40supports">CanIUse</a>
+                </div>
             </aside>
-
-            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@supports">Mdn</a>
-            <a class="credit" href="https://caniuse.com/#search=%40supports">CanIUse</a>
         </section>
         <section id="calc()" class="main-section">
             <header>
@@ -344,7 +342,7 @@
                 in your expression, if you wish. You may also use parentheses to establish computation order when
                 needed.</p>
 
-            <h4>Example 1</h4>
+            <h3>Example 1</h3>
 
             <p>calc() makes it easy to position an object with a set margin. In this example, the CSS creates a banner
                 that stretches across the window, with a 40-pixel gap between both sides of the banner and the edges of
@@ -376,7 +374,7 @@
                 <span class="punctuation">}</span>
                 </code>
             </div>
-            <h4>Example 2</h4>
+            <h3>Example 2</h3>
 
             <p>Another use case for <code class="code-snippet">calc()</code> is to help ensure that form fields fit
                 in the available space, without extruding past the edge of their container, while maintaining an appropriate margin.</p>
@@ -432,9 +430,13 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="support-buttons">
+                    <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">Mdn</a>
+                    <a class="credit" href="https://caniuse.com/#search=calc">CanIUse</a>
+                </div>
             </aside>
-            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">Mdn</a>
-            <a class="credit" href="https://caniuse.com/#search=calc">CanIUse</a>
+
+
         </section>
         <section id="media_queries" class="main-section">
             <header>
@@ -447,7 +449,7 @@
                 nested inside any other conditional
                 group at-rule.</p>
 
-            <h4>Example 1</h4>
+            <h3>Example 1</h3>
             <div class="code-block">
                 <code>
                     <span class="comment">/* At the top level of your code */</span>
@@ -510,10 +512,11 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="support-buttons">
+                    <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">Mdn</a>
+                    <a class="credit" href="https://caniuse.com/#search=%40media">CanIUse</a>
+                </div>
             </aside>
-
-            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">Mdn</a>
-            <a class="credit" href="https://caniuse.com/#search=%40media">CanIUse</a>
         </section>
         <section id="Box-sizing" class="main-section">
             <header>
@@ -536,7 +539,7 @@
                     This typically makes it much easier to size elements.</li>
             </ul>
 
-            <h4>Example 1</h4>
+            <h3>Example 1</h3>
             <div class="code-block">
                 <code>
                     <span class="class">.content-box</span> <span class="punctuation">{</span>
@@ -550,7 +553,7 @@
                 </code>
             </div>
 
-            <h4>Example 2</h4>
+            <h3>Example 2</h3>
             <div class="code-block">
                 <code>
                     <span class="class">.border-box</span> <span class="punctuation">{</span>
@@ -595,10 +598,11 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="support-buttons">
+                    <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">Mdn</a>
+                    <a class="credit" href="https://caniuse.com/#search=box-si">CanIUse</a>
+                </div>
             </aside>
-
-            <a class="credit" href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing">Mdn</a>
-            <a class="credit" href="https://caniuse.com/#search=box-si">CanIUse</a>
         </section>
         <div id="attribution">
             <p>Site content from <a href="https://caniuse.com/">CanIUse.com</a> and <a

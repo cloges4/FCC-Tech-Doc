@@ -15,16 +15,24 @@ a {
 body {
   font-family: "Roboto", sans-serif;
   background-color: #fafafa;
+  color: #3e3c42;
   margin: 0;
-  line-height: 1.5;
+  line-height: 2;
   letter-spacing: 0.2rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
 
+h1,
+h2,
+h3 {
+  color: #4b484f;
+}
+
 /* NAVBAR */
 
 #navbar {
+  background-color: #f0f0f0;
 }
 
 #navbar h1 {
@@ -51,10 +59,23 @@ body {
 /* MAIN-DOC */
 
 #main-doc {
-  padding: 1.5rem;
+  padding: 1.75rem;
+}
+
+header {
+  margin: 4rem 0 2rem;
+}
+
+p {
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 /* Code  */
+
+h3 {
+  margin: 4rem 0 2rem;
+}
 
 .code-snippet {
   color: #fafafa;
@@ -69,6 +90,7 @@ body {
   border-radius: 5px;
   color: grey;
   background-color: #1a1a1a;
+  margin: 1.5rem 0 2rem;
 }
 
 code {
@@ -113,9 +135,24 @@ code {
   color: #ddda0f;
 }
 
+/* FIXME button issue */
 /* browser support */
 
 .browser-support {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.support-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: flex-end;
 }
 
 table {
@@ -148,12 +185,27 @@ tr {
   color: #fafafa;
 }
 
+/* button */
+
+.credit {
+  text-transform: uppercase;
+  border: 2px solid #1481ba;
+  background-color: #1481ba;
+  border-radius: 5%;
+  padding: 0.5em;
+  color: #fafafa;
+  margin-right: 1.5rem;
+}
+
+.credit:hover {
+  background-color: #1481ba;
+  opacity: 0.7;
+}
+
 /* Attribution */
 
 #attribution {
   text-align: center;
-  background-color: #1481ba;
-  color: #fafafa;
   padding: 1.5rem 0;
 }
 
