@@ -1,3 +1,6 @@
+/* TODO  test site*/
+/* TODO set mobile and tablet sizes */
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -19,7 +22,9 @@ body {
   margin: 0;
   line-height: 2;
   letter-spacing: 0.2rem;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   grid-template-columns: 1fr 3fr;
 }
 
@@ -33,6 +38,7 @@ h3 {
 
 #navbar {
   background-color: #f0f0f0;
+  min-width: 25%;
 }
 
 #navbar h1 {
@@ -53,12 +59,18 @@ h3 {
 }
 
 .nav-link {
+  color: #3e3c42;
   font-size: 1.25rem;
+}
+
+.nav-link:hover {
+  color: #1481ba;
 }
 
 /* MAIN-DOC */
 
 #main-doc {
+  max-width: 75%;
   padding: 1.75rem;
 }
 
@@ -135,7 +147,6 @@ code {
   color: #ddda0f;
 }
 
-/* FIXME button issue */
 /* browser support */
 
 .browser-support {
