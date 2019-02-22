@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="theme-color" content="#000" />
     <title>CSS Features</title>
+    <link rel="stylesheet" href="prism.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -50,28 +50,22 @@
 
         <h3>Declaring a variable</h3>
 
-        <aside class="code-block">
-          <code>
-            <pre>
-                    <!-- todo markup code blocks -->
-                    <!--                       <span class="selector">element</span> <span class="punctuation">{</span>
-                          --main-bg-color<span class="punctuation">:</span> <span class="value">brown</span><span class="punctuation">;</span>
-                      <span class="punctuation">}</span> -->
-                </pre>
-          </code>
+        <aside class="language-css"><pre data-lang="CSS"><code>
+element {
+  --main-bg-color: brown;
+}
+          </code></pre>
         </aside>
 
         <h3>Using the variable</h3>
-        <aside class="code-block">
-          <code>
-            <pre>
-                    <!-- todo markup code block -->
-                    <!--                       <span class="selector">element</span> <span class="punctuation">{</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span class="punctuation">;</span>
-                      <span class="punctuation">}</span> -->
-                </pre>
-          </code>
+
+        <aside class="language-css"><pre data-lang="CSS"><code>
+element {
+  background-color: var(--main-bg-color );
+}
+          </pre></code>
         </aside>
+
         <aside>
           <h3>Example 1</h3>
           <p>
@@ -79,68 +73,43 @@
             classes
           </p>
         </aside>
-        <aside class="code-block">
-          <code>
-            <pre>
-                    <!-- todo markup code block -->
-                    <!-- <span class="class">.one</span> <span class="punctuation">{</span>
-                          <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span class="punctuation">;</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">brown</span><span
-                              class="punctuation">;</span>
-                          <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span class="unit">px</span><span
-                              class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="number">50</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">height</span><span class="punctuation">:</span> <span class="number">50</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">display</span><span class="punctuation">:</span> <span class="value">inline-block</span><span
-                              class="punctuation">;</span>
-                      <span class="punctuation">}</span>
+        <aside class="language-css"><pre data-lang="CSS"><code>
+.one {
+  color: white;
+  background-color: brown;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.two {
+  color: white;
+  background-color: black;
+  margin: 10px;
+  width: 150px;
+  height: 70px;
+  display: inline-block;
+}
+
+.three {
+  color: white;
+  background-color: brown;
+  margin: 10px;
+  width: 150px;
+}
   
-                      <span class="class">.two</span> {
-                          <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
-                              class="punctuation">;</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">black</span><span
-                              class="punctuation">;</span>
-                          <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="number">150</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">height</span><span class="punctuation">:</span> <span class="number">70</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">display</span><span class="punctuation">:</span> <span class="value">inline-block</span><span
-                              class="punctuation">;</span>
-                      <span class="punctuation">}</span>
-  
-                      <span class="class">.three</span> <span class="punctuation">{</span>
-                          <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
-                              class="punctuation">;</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">brown</span><span
-                              class="punctuation">;</span>
-                          <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="number">150</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                      <span class="punctuation">}</span>
-  
-  
-                      <span class="class">.four</span> <span class="punctuation">{</span>
-                          <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
-                              class="punctuation">;</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">brown</span><span
-                              class="punctuation">;</span>
-                          <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="number">100</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                      <span class="punctuation">}</span>
-  
-                      <span class="class">.five</span> <span class="punctuation">{</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">brown</span><span
-                              class="punctuation">;</span>
-                      <span class="punctuation">}</span> -->
-                </pre>
-          </code>
+.four {
+  color: white;
+  background-color: brown;
+  margin: 10px;
+  width: 100px;
+}
+
+.five {
+  background-color: brown;
+}
+          </pre></code>
         </aside>
 
         <p>
@@ -153,77 +122,50 @@
         </p>
 
         <h3>Example 2</h3>
-        <aside class="code-block">
-          <code>
-            <pre>
-                <!-- todo markup code -->
-                <!--                       <span class="selector">:root</span> <span class="punctuation">{</span>
-                          <span>--main-bg-color</span><span class="punctuation">:</span> <span class="value">brown</span><span class="punctuation">;</span>
-                      <span class="punctuation">}</span>
-  
-                      <span class="class">.one</span> <span class="punctuation">{</span>
-                          <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
-                              class="punctuation">;</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span
-                              class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span
-                              class="punctuation">;</span>
-                          <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="number">50</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">height</span><span class="punctuation">:</span> <span class="number">50</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">display</span><span class="punctuation">:</span> <span class="value">inline-block</span><span
-                              class="punctuation">;</span>
-                      <span class="punctuation">}</span>
-  
-                      <span class="class">.two</span> {
-                          <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
-                              class="punctuation">;</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">black</span><span
-                              class="punctuation">;</span>
-                          <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="number">150</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">height</span><span class="punctuation">:</span> <span class="number">70</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">display</span><span class="punctuation">:</span> <span class="value">inline-block</span><span
-                              class="punctuation">;</span>
-                      <span class="punctuation">}</span>
-  
-                      <span class="class">.three</span> {
-                          <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
-                              class="punctuation">;</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span
-                              class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span
-                              class="punctuation">;</span>
-                          <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="number">75</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                      <span class="punctuation">}</span>
-  
-                      <span class="class">.four</span> {
-                          <span class="property">color</span><span class="punctuation">:</span> <span class="value">white</span><span
-                              class="punctuation">;</span>
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span
-                              class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span
-                              class="punctuation">;</span>
-                          <span class="property">margin</span><span class="punctuation">:</span> <span class="number">10</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="number">100</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                      <span class="punctuation">}</span>
-  
-                      <span class="class">.five</span> {
-                          <span class="property">background-color</span><span class="punctuation">:</span> <span class="special">var</span><span
-                              class="punctuation">(</span><span class="value">--main-bg-color</span><span class="punctuation">)</span><span
-                              class="punctuation">;</span>
-                      <span class="punctuation">}</span> -->
-            </pre>
-          </code>
+        <aside class="language-css"><pre data-lang="CSS"><code>
+
+:root {
+  --main-bg-color: brown;
+}
+
+.one {
+  color: white;
+  background-color: var(--main-bg-color);
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+.two {
+  color: white;
+  background-color: black;
+  margin: 10px;
+  width: 150px;
+  height: 70px;
+  display: inline-block;
+}
+
+.three {
+  color: white;
+  background-color: var(--main-bg-color);
+  margin: 10px;
+  width: 75px;
+}
+
+.four {
+  color: white;
+  background-color: var(--main-bg-color);
+  margin: 10px;
+  width: 100px;
+}
+
+.five {
+  background-color: var(--main-bg-color);
+}
+          </pre></code>
         </aside>
+
         <aside class="browser-support">
           <p
             class="ciu_embed"
@@ -286,20 +228,14 @@
         </article>
 
         <h3>Example 1</h3>
-        <aside class="code-block">
-          <code>
-            <pre>
-                    <!-- todo markup code -->
-                    <!--                       <span class="selector">@supports</span> <span class="punctuation">(</span><span class="property">display</span><span
-                          class="punctuation">:</span> <span class="value">grid</span><span class="punctuation">)</span> <span
-                          class="punctuation">{</span>
-                      <span class="selector">div</span> <span class="punctuation">{</span>
-                          <span class="property">display</span><span class="punctuation">:</span> <span class="value">grid</span><span
-                              class="punctuation">;</span>
-                          <span class="punctuation">}</span>
-                      <span class="punctuation">}</span> -->
-                </pre>
-          </code>
+
+        <aside class="language-css"><pre data-lang="CSS"><code>
+@supports (display: grid) {
+  div {
+    display: grid;
+  }
+}
+          </pre></code>
         </aside>
         <p>
           The above example checks to see if the browser support CSS-grid if yes, then the styles
@@ -308,20 +244,13 @@
 
         <h3>Example 2</h3>
 
-        <aside class="code-block">
-          <code>
-            <pre>
-                    <!-- todo markup code -->
-                    <!--                       <span class="selector">@supports</span> <span class="special">not</span> <span class="punctuation">(</span><span class="property">display</span><span
-                          class="punctuation">:</span> <span class="value">grid</span><span class="punctuation">)</span> <span
-                          class="punctuation">{</span>
-                          <span class="selector">div</span> <span class="punctuation">{</span>
-                              <span class="property">float</span><span class="punctuation">:</span> <span class="value">right</span><span
-                              class="punctuation">;</span>
-                          <span class="punctuation">}</span>
-                      <span class="punctuation">}</span> -->
-                </pre>
-          </code>
+        <aside class="language-css"><pre data-lang="CSS"><code>
+@supports not (display: grid) {
+  div {
+    float: right;
+  }
+}
+          </pre></code>
         </aside>
 
         <p>
@@ -400,34 +329,18 @@
           </p>
         </article>
 
-        <aside class="code-block">
-          <code>
-            <pre>
-                    <!-- todo markup code -->
-                    <!--                   <span class="class">.banner</span> <span class="punctuation">{</span>
-                      <span class="property">position</span><span class="punctuation">:</span> <span class="value">absolute</span><span
-                          class="punctuation">;</span>
-                      <span class="property">left</span><span class="punctuation">:</span> <span class="number">40</span><span
-                          class="unit">px</span><span class="punctuation">;</span>
-                      <span class="property">width</span><span class="punctuation">:</span> <span
-                          class="value">calc</span><span class="punctuation"></span>(</span><span
-                          class="number">100</span><span class="unit">%</span> <span
-                          class="unit">-</span> <span class="number">80</span><span
-                          class="unit">px</span><span class="punctuation">)</span><span
-                          class="punctuation">;</span>
-                      <span class="property">background-color</span><span class="punctuation">:</span> <span class="value">yellow</span><span
-                          class="punctuation">;</span>
-                      <span class="property">border</span><span class="punctuation">:</span> <span class="number">1</span><span
-                          class="unit">px</span> <span class="value">solid</span> <span class="value">black</span><span class="punctuation">;</span>
-                      <span class="property">padding</span><span class="punctuation">:</span> <span class="number">6</span><span
-                          class="unit">px</span><span class="punctuation">;</span>
-                      <span class="property">text-align</span><span class="punctuation">:</span> <span class="value">center</span><span
-                          class="punctuation">;</span>
-                      <span class="property">box-sizing</span><span class="punctuation">:</span> <span class="value">border-box</span><span
-                          class="punctuation">;</span>
-                  <span class="punctuation">}</span> -->
-                </pre>
-          </code>
+        <aside class="language-css"><pre data-lang="CSS"><code>
+.banner {
+  position: absolute;
+  left: 40px;
+  width: calc(100% - 80px);
+  background-color: yellow;
+  border: 1px solid black;
+  padding: 6px;
+  text-align: center;
+  box-sizing: border-box;
+}
+          </pre></code>
         </aside>
 
         <article>
@@ -439,29 +352,17 @@
           </p>
         </article>
 
-        <aside class="code-block">
-          <code>
-            <pre>
-                    <!-- todo markup code -->
-                    <!--                       <span class="selector">input</span> <span class="punctuation">{</span>
-                          <span class="property">padding</span><span class="punctuation">:</span> <span class="number">6</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="value">calc</span><span
-                              class="punctuation"></span>(</span><span class="number">100</span><span class="unit">%</span> <span
-                              class="unit">-</span> <span class="number">1</span><span class="unit">em</span><span
-                              class="punctuation">)</span><span class="punctuation">;</span>
-                      <span class="punctuation">}</span>
+        <aside class="language-css"><pre data-lang="CSS"><code>
+input {
+  padding: 6px;
+  width: calc(100% - 1em);
+}
   
-                      <span class="id">#formbox</span> <span class="punctuation">{</span>
-                          <span class="property">padding</span><span class="punctuation">:</span> <span class="number">4</span><span
-                              class="unit">px</span><span class="punctuation">;</span>
-                          <span class="property">width</span><span class="punctuation">:</span> <span class="value">calc</span><span
-                              class="punctuation"></span>(</span><span class="number">100</span><span class="unit">%</span> <span
-                              class="unit">/</span> <span class="number">6</span><span
-                              class="punctuation">)</span><span class="punctuation">;</span>
-                      <span class="punctuation">}</span> -->
-                </pre>
-          </code>
+#formbox {
+  padding: 4px;
+  width: calc(100% / 6);
+}
+          </pre></code>
         </aside>
 
         <aside class="browser-support">
@@ -495,35 +396,25 @@
 
         <h3>Example 1</h3>
 
-        <aside class="code-block">
-          <!-- todo markup code block -->
-          <!--                       <span class="comment">/* At the top level of your code */</span>
-                      <span class="selector">@media</span> <span class="property">screen</span> <span
-                          class="special">and</span> <span class="punctuation">(</span><span
-                          class="property">min-width</span><span class="punctuation">:</span> <span
-                          class="number">900</span><span class="unit">px</span><span
-                          class="punctuation">)</span> <span class="punctuation">{</span>
-                          <span class="selector">article</span> <span class="punctuation">{</span>
-                              <span class="property">padding</span><span class="punctuation">:</span> <span
-                                  class="number">1.25</span><span class="unit">rem</span><span
-                                  class="punctuation">;</span>
-                          <span class="punctuation">}</span>
-                      <span class="punctuation">}</span>
-  
-                      <span class="comment">/* Nested within another conditional at-rule */</span>
-                      <span class="selector">@supports</span> <span class="punctuation">(</span><span class="property">display</span><span
-                          class="punctuation">:</span> <span class="value">flex</span><span class="punctuation">)</span> <span
-                          class="punctuation">{</span>
-                              <span class="selector">@media</span> <span class="property">screen</span> <span class="special">and</span> <span
-                                  class="punctuation">(</span><span class="property">min-width</span><span class="punctuation">:</span> <span
-                                  class="number">900</span><span class="unit">px</span><span class="punctuation">)</span> <span
-                                  class="punctuation">{</span>
-                                      <span class="selector">article</span> <span class="punctuation">{</span>
-                                          <span class="property">display</span><span class="punctuation">:</span> <span
-                                              class="value">flex</span><span class="punctuation">;</span>
-                                      <span class="punctuation">}</span>
-                                  <span class="punctuation">}</span>
-                              <span class="punctuation">}</span> -->
+        <aside class="language-css"><pre data-lang="CSS"><code>
+/* At the top level of your code */
+@media screen and (min-width: 900px) {
+  article {
+    padding: 1.25rem;
+  }
+}
+
+/* Nested within another conditional at-rule */
+@supports (display: flex) {
+  @media screen and (min-width: 900px) {
+    article {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+  }
+}
+          </pre></code>
         </aside>
 
         <aside class="browser-support">
@@ -573,40 +464,30 @@
         </article>
 
         <h3>Example 1</h3>
-        <aside class="code-block">
-          <code>
-            <pre>
-                    <!-- todo markup code -->
-                    <!--                       <span class="class">.content-box</span> <span class="punctuation">{</span>
-                          <span class="property">box-sizing</span><span class="punctuation">:</span> <span
-                              class="value">content-box</span><span class="punctuation">;</span>
-                          <span class="comment">/* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
-                          Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
-                          Content box width: 160px
-                          Content box height: 80px */</span>
-                      <span class="punctuation">}</span> -->
-                </pre>
-          </code>
+        <aside class="language-css"><pre data-lang="CSS"><code>
+.content-box {
+  box-sizing: content-box;
+  /* Total width: 160px + (2 * 20px) + (2 * 8px) = 216px
+  Total height: 80px + (2 * 20px) + (2 * 8px) = 136px
+  Content box width: 160px
+  Content box height: 80px */
+}
+          </pre></code>
         </aside>
 
         <h3>Example 2</h3>
 
-        <aside class="code-block">
-          <code>
-            <pre>
-                    <!-- todo markup code -->
-                    <!--                       <span class="class">.border-box</span> <span class="punctuation">{</span>
-                          <span class="property">box-sizing</span><span class="punctuation">:</span> <span class="value">border-box</span><span
-                              class="punctuation">;</span>
-                          <span class="comment">/* Total width: 160px
-                          Total height: 80px
-                          Content box width: 160px - (2 * 20px)
-                          - (2 * 8px) = 104px
-                          Content box height: 80px - (2 * 20px)
-                          - (2 * 8px) = 24px */</span>
-                          <span class="punctuation">}</span> -->
-                </pre>
-          </code>
+        <aside class="language-css"><pre data-lang="CSS"><code>
+.border-box {
+  box-sizing: border-box;
+  /* Total width: 160px
+  Total height: 80px
+  Content box width: 160px - (2 * 20px)
+  - (2 * 8px) = 104px
+  Content box height: 80px - (2 * 20px)
+  - (2 * 8px) = 24px */
+}
+          </pre></code>
         </aside>
 
         <aside class="browser-support">
@@ -629,6 +510,7 @@
         </p>
       </aside>
     </main>
+    <script src="prism.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
