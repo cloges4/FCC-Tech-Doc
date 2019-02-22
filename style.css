@@ -3,14 +3,43 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
-
 body {
+  font-family: "Montserrat", sans-serif;
   background-color: #fafafa;
   color: #3e3c42;
   margin: 0;
   line-height: 2;
   letter-spacing: 0.2rem;
+}
+
+#main-doc {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: repeat(20, auto);
+}
+
+#main-doc > * {
+  grid-column: 2;
+  min-width: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+article,
+aside {
+  padding: 50px 0;
+}
+
+/* code samples */
+
+.language-css > code {
+  font-size: 12px;
 }
