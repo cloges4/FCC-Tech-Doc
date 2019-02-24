@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <!-- <nav id="navbar">
+    <nav class="navbar" id="navbar">
+      <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
       <header>
         <h1>CSS Features</h1>
       </header>
@@ -21,7 +22,8 @@
         <li><a class="nav-link" href="#media_queries">Media Queries</a></li>
         <li><a class="nav-link" href="#Box-sizing">Box-sizing</a></li>
       </ul>
-    </nav> -->
+    </nav>
+    <span onclick="openNav()" class="open" id="open">&#9776</span>
     <main id="main-doc">
       <section id="custom_properties" class="main-section">
         <header>
@@ -510,6 +512,7 @@ input {
         </p>
       </aside>
     </main>
+    <script src="js/script.js"></script>
     <script src="js/prism.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/caniuse-embed.min.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
