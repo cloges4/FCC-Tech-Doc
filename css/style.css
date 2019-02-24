@@ -28,7 +28,7 @@ h1 {
   margin: 0;
   padding: 75px;
   font-weight: 100;
-  color: #fafafa;
+  color: yellow;
   text-align: center;
 }
 
@@ -64,7 +64,7 @@ h1 {
 }
 
 .nav-link:hover {
-  color: #FAEF54;
+  color: #faef54;
 }
 
 .nav-link {
@@ -90,7 +90,7 @@ h1 {
   grid-template-columns: 20px 1fr 20px;
   grid-auto-rows: minmax(100px, auto);
   grid-row-gap: 125px;
-  padding-left: .75rem; 
+  padding-left: 0.75rem;
 }
 
 #main-doc > * {
@@ -146,4 +146,40 @@ h1 {
   color: #179ee0;
   opacity: 0.7;
 }
+
+/* media Queries */
+
+@media screen and (min-width: 770px) {
+  .close,
+  .open {
+    display: none;
+  }
+
+  .navbar {
+    width: 250px;
+    top: 0;
+    left: 0;
+  }
+
+  #main-doc {
+    grid-template-columns: 250px 1fr 40px;
+    padding-left: 40px;
+  }
+
+  h1 {
+    text-align: initial;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  #nav {
+    padding: 0.75rem;
+    text-align: initial;
+  }
+
+  #nav li {
+    padding: 0.75rem 0;
+    list-style-type: none;
+    font-size: 1.1rem;
+  }
 }
