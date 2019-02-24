@@ -9,7 +9,7 @@ body {
   color: #3e3c42;
   margin: 0;
   line-height: 2;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   font-weight: 500;
 }
 
@@ -27,32 +27,27 @@ img {
 h1 {
   margin: 0;
   padding: 75px;
-  /* font-size: 6rem; */
   font-weight: 100;
-  color: white;
+  color: #fafafa;
   text-align: center;
 }
 
 .open {
-  color: green;
+  color: #3e3c42;
   font-size: 40px;
-  grid-column: 3 / span 1;
-  /* float: right; */
-  /* padding-right: 0.5rem; */
+  position: fixed;
+  right: 5px;
   padding-top: 0.5rem;
   cursor: pointer;
   display: block;
 }
-/* .open:hover {
-  opacity: 0.8;
-} */
 
 .navbar {
-  height: 100vh;
+  height: 100%;
   width: 0;
   position: fixed;
   z-index: 1;
-  background-color: rgba(34, 65, 93, 0.9);
+  background-color: rgba(0, 136, 201, 0.8);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   display: block;
@@ -65,24 +60,22 @@ h1 {
 
 #nav li {
   padding: 1.2rem 0;
-  /* font-size: 3rem; */
-  color: white;
   list-style-type: none;
 }
 
 .nav-link:hover {
-  color: yellow;
+  color: #FAEF54;
 }
 
 .nav-link {
-  color: white;
+  color: #fafafa;
   text-decoration: none;
 }
 
 .close {
   float: right;
   font-size: 44px;
-  color: white;
+  color: #fafafa;
   display: block;
   text-decoration: none;
   -webkit-transition: 0.3s;
@@ -97,6 +90,7 @@ h1 {
   grid-template-columns: 20px 1fr 20px;
   grid-auto-rows: minmax(100px, auto);
   grid-row-gap: 125px;
+  padding-left: .75rem; 
 }
 
 #main-doc > * {
