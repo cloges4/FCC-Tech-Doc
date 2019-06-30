@@ -1,5 +1,5 @@
 
-# FCC-Product-Landing-Page
+# FCC-Technical-Documentaton-Page
 
 This project is part of the FreeCodeCamp Responsive Web Design Certification. Project requirements can be found [here](https://learn.freecodecamp.org/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page). 
 
